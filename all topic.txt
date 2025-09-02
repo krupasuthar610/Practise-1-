@@ -1,0 +1,22 @@
+*  Core JAVA   
+*  collection q.
+*  Servlet         
+*  Spring         
+*  SPringMVC       
+*  SpringBoot     
+*  JDBC         
+*  Hibernate          
+*  Joins            
+       
+* java fetures 8, 11, 17  
+-----------------------------------------------------------------
+* core java progarm
+  string 
+  array
+  collection 
+  flow control statement
+  spring boot crud with proper understanding
+-----------------------------------------------------------------
+javascript       
+anguler js
+anguler 
