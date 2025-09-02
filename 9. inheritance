@@ -1,0 +1,55 @@
+inheritance
+------------
+	• Father and child relationship called inheritance.
+	• Reduce the length of the code.
+	• Reduce the code duplication
+	• IS-A  relation
+
+
+• The  Process of acquiring properties and behavior, the one class to another class is called 
+  inheritance.
+• Acquiring inheritance by extended keywords.
+         
+• Extends :-
+It makes the relationship between the two classes, once the action is done automatically 
+code is reused.
+
+• Type of inheritance	
+
+(1)Single 
+father and child relation.
+	      
+(2)Multilevel 
+Ek class Je father and child banne relation perform kare che.
+
+(3)Hierarchical
+one father having more than one child.
+
+(4)Multiple
+two parent one child.
+class c extends  a,b
+// inheritance not support multiple inheritance concept.
+ to avoid complexity and ambiguity that arise when two classes have methods with the same name. 
+This ensures clarity and simplicity in Java’s design.
+diamond problem 
+
+(5)Hybrid
+hybrid ae mixup all type che, and aema  multiple aavi jay to
+inheritance also not support hybrid.
+
+
+NOTE:
+•Every class in the java programming is a child class of object.
+•The root class for all java classes is Object class.
+•The default package in the java programming is java.lang package
+
+
+Final:-
+•Final is the modifier applicable for classes, methods and variables (for all instance, Static and local variables).
+•if a class is declared as final, then we cannot inherit that class i.e., we cannot create any child class for that final class.
+•Every method present inside a final class is always final by default but every variable present inside the final class need not be final.
+•The main advantage of final modifier is we can achieve security as no one can be allowed to change our implementation.
+•But the main disadvantage of final keyword is we are missing key benefits of Oops like inheritance and polymorphism. Hence is there is no specific requirement never recommended 
+ to use final modifier
+
+

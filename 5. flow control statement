@@ -1,0 +1,169 @@
+1. selection / conditional statements:
+    based on particuler condition the selected block will be executed.
+    if
+    if-else 
+    else-if 
+    switch
+
+
+2.  Iteration/ looping ststements: 
+     the same code will be repeated multiple time.
+      for 
+      for-each
+      while
+      do-while
+
+
+3. Transfer / jumping statements
+       break
+       continue
+       goto
+       try
+       return
+
+-------------------------------------------------------------------
+
+1. if : to take only one option
+         if (cond)
+         {   true body
+         }
+   
+ 
+2. if-else : take two option
+          if (cond)
+         {   true body
+         }
+         else
+          {  false body
+          }
+
+
+3. else-if : takes more than two options
+        if (cond)
+        {   st(s)
+        }
+        else-if(cond)
+        {  st(s)
+        }
+        else-if(cond)
+        {  st(s)
+        }
+
+-----------------------------------------------------------------------------
+//switch : multiple options
+
+
+Syntax :
+         
+switch(argument)
+{
+	case label-1 :statement(s);
+                   break;
+    case label-2  :stateents;
+                   break;
+            |       |
+            |       |
+    case label-n  :statements;
+                   break;
+}
+-------------------------------------------------------------------------------------------
+
+a. switch Statement is used to declare multiple option of same type.
+b. switch is taking the argumnet, the allowed arguments are.
+    
+     byte, short, int, char (primitive)
+     Byte, Short, Integer, Character (wrapper classes) java 1.5
+     String (java 1.7 v)
+     enum   (java 1.5 v)
+
+
+c. Inside the switch possible to declare multiple cases but it is possible to declare only 
+    one default.
+d. based on the provided argument the matched case will be executed if the cases are not 
+   matched default will be executed.
+e. float, double, long is not allowed as a switch argument because these are  having
+   too large values.
+f. boolean is not allowedd because boolean contains too less values.
+
+NOTE: when we want check multiple conditions then we have to use else-if.
+      in switch based on the argument data the matched case will be executed.
+
+
+a. inside the switch statement break is optional.
+b. if we are not declaring break statement then from the matched case onwards up to the next
+   break statement will be executed, if there is no break statement
+   then end of the switch will be executed.
+c. The above situation is called "fall though" inside the switch.
+
+d. default is optional
+e. cases are optional
+f. both are optional.
+g. Invalid: inside the switch independent statement are not allowed. 
+   if we are declaring the statements taht statement must be inside the case or default.
+h. default can be any statement
+i. duplicate case labels are not allowed.
+j. case in range of the datatype space.
+k. the switch argument is string means the switch the case labels must string only.
+l. varaibles are not allowed as case lables.
+m. final label allowed as case labels.
+-------------------------------------------------------------------------------------------
+LOOPS
+
+//forLoop
+             1         2   5      4  7
+for (initialization; condition; inc/dec)
+{        body 3 6 
+}
+
+- iterate a part of the program serveral times.if the number of iteration is fixed, 
+for(;;)------------represent infinite loop because the condition is always true.
+
+//for each
+for (type var : array) 
+{ 
+     statements using var;
+}
+
+-The for-each loop in Java (also called the enhanced for loop) was introduced in Java 5 to simplify iteration over 
+arrays and collections. It is cleaner and more readable than the traditional for loop and is commonly used when the 
+exact index of an element is not required.
+
+
+
+//while
+while (cond)
+{ body
+}
+
+- If we want to execute group of statements repeatedly or more number of times then we should 
+  go for while loop
+- iterate a part of the program serveral times.if the number of iteration is not fixed,
+
+
+//do-while
+do
+{   body;
+}while (); 
+
+If we want to execute the loop body at least one time them we should go for do-while 
+statement.
+
+
+- if you want to execute body first without condition check then use do-while
+- iterate a part of the progarm serveral times. use it if the number of iteration
+- is not fixed and you must have to execute the loop at least once.
+
+---------------------------------------------------------------------------------
+Note:
+Entry controlled loop : for,while
+Exit control loop : do-while
+
+The minimum occurences in for,while : 0
+the minimum occurences in do-while  : 1
+
+Transfer statements:- by using transfer statements we are able to transfer the flow of 
+execution from one position to another position .
+1. break
+2. continue (skip the current iteration continue the rest of the iterations normally)
+3. return
+4. try

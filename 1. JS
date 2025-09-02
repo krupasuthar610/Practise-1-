@@ -1,0 +1,76 @@
+javaScript improves the user experience of the web page by converting a static page into an interactive one.
+
+-----------------------------------------------------------------------------------------------------------------
+Values & variables 
+
+var (old, function-scoped)
+let (block-scoped, preferred for mutable variables)
+const (block-scoped, for constants)
+
+-------------------------------------------------------------------------------
+DataType
+
+1. Primitive Data Types
+These hold single values and are immutable.
+ 
+Data Type           Example	                      Description
+String	            "Hello"	                         Textual data
+Number	             42, 3.14	                     Integers and floating-point numbers
+Boolean	             true, false	                 Logical true or false
+Null	             null	                         Represents an empty or unknown value
+Undefined	         undefined	                     Variable declared but not assigned yet
+Symbol	             Symbol("id")	                 Unique identifiers (ES6+)
+BigInt	             12345678901234567890n	         Large integers (ES11 / ES2020+)
+
+
+let name = "Alice";        // String
+let age = 25;              // Number
+let isActive = true;       // Boolean
+let salary = null;         // Null
+let city;                  // Undefined
+const id = Symbol("id");   // Symbol
+const bigNum = 9007199254740991n; // BigInt
+
+
+2. Non-Primitive (Object) Data Types
+These are complex types that can hold collections of values.
+
+Type	         Example	                  Description
+Object	      {name: "John", age: 30}	       Key-value pairs
+Array	      [1, 2, 3, 4]	                   Ordered list of values
+Function	  function greet() {}	           Reusable block of code
+Date	      new Date()	                   Represents date and time
+RegExp	      /abc/	                           Regular expression
+
+
+let person = { name: "Alice", age: 25 }; // Object
+let numbers = [1, 2, 3, 4];              // Array
+
+function greet() {                       // Function
+  console.log("Hello!");
+}             
+                          
+let today = new Date();                 // Date object
+
+---------------------------------------------------------------------------------------
+Operators
+
+Assignment Operators
+=	+=	-=	*=	/=	 %=
+
+Arithmetic Operators 
++	-	*	/	%	-- 
+
+Comparison Operators
+==	===	!=	!==	><	>=	<=
+
+Logical Operators
+&&  `  !
+
+String Operator
++
+
+Conditional (Ternary) Operator
+condition ? val1 : val2
+
+-------------------------------------------------------------------------------------------------

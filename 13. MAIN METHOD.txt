@@ -1,0 +1,52 @@
+MAIN METHOD 
+------------
+
+public --> to give the access permission to JVM
+static --> direct permission to jvm without object creation.
+void   --> no return value
+main   --> method name configured in JVM
+
+String[] args ---> used to take command line arguments
+
+String  --> any type of the data
+[]      --> any number of values
+args    --> it is a variable of String[]
+
+
+modification on main method:
+1. modification order is not important.
+   public static
+   static public
+
+static public void main(String[] args)
+
+2. diffrent way of array declaration.
+   String[] args
+   String  []args
+   String  args[]
+
+3. String[] ----> String...(variable argument)
+   static public void main(String...args)
+
+4. in place of 'args' it is possible to atke any name.
+    static public void main(String... ratn)
+
+5. public static final strictfp synchronized
+    mandatory : public static
+    mandatory : final strictfp synchronized
+
+
+strictfp: (static flooting point)
+a. the flooting point calculations are varied from OS to OS 
+   & processor to processor it will generate plateform deprndent output.
+
+b. to overcome above problem to get platform independent result use 
+    strictfp modifier.
+
+c. if a class declared as strcifp inside the class, all method will follw the IEEE745
+    above same as method
+
+
+
+
+   

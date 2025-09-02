@@ -1,0 +1,27 @@
+private Users DtoToUSers(UsersDto userDto) {
+		Users user = this.modeMapper.map(userDto, Users.class);
+		return user;	
+		}
+	
+	private UsersDto UsersToDto(Users users) {
+		UsersDto userDto = this.modeMapper.map(users, UsersDto.class);	
+		return userDto;	
+		}
+		
+-------------------------------------------------------------------------
+Purpose of Using DTO (Data Transfer Object)
+Encapsulation – Hides entity details from the client.
+Decoupling – Separates service and persistence layers.
+Security – Prevents exposing sensitive entity fields.
+Performance – Optimizes data transfer by sending only required fields.
+-----------------------------------------------------------
+How modelMapper.map() Works
+modelMapper.map(source, destination.class) automatically converts an object of one type into another type.
+
+Example: this.modeMapper.map(userDto, Users.class)
+Takes userDto (UsersDto object).
+Converts it into a Users object.
+Returns the converted object.
+Similarly, this.modeMapper.map(users, UsersDto.class) converts Users to UsersDto.
+
+This removes the need for manual field mapping and makes the code cleaner.

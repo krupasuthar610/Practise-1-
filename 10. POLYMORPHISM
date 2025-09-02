@@ -1,0 +1,106 @@
+polymorephism:
+   
+one functionality with different bahaviors is called polymorphism.
+the ability to appear in many forms is called polymorphism.
+
+	
+• Two type :-
+    1. Compile time  - overloading 
+    2. Run time - overriding
+             
+
+Overloading
+If a class has multiple methods having same name but different in parameters,
+it is known as Method Overloading.
+ 
+There are two ways to overload the method in java
+	1. By changing number of arguments
+	2. By changing the argument and argument  data type
+	
+In Java, Method Overloading is not possible by changing the return type of the method only.
+	
+	
+Can we overload java main() method?
+Yes, by method overloading. You can have any number of main methods in a class by method 
+overloading. But JVM calls main() method which receives string array as arguments only. 
+Let's see the simple example:
+3. class TestOverloading4{  
+4. public static void main(String[] args){System.out.println("main with String[]");}  
+5. public static void main(String args){System.out.println("main with String");}  
+6. public static void main(){System.out.println("main without args");}  
+7. }  
+Test it Now
+Output:
+main with String[]
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Method Overriding in Java
+If subclass (child class) has the same method as declared in the parent class,
+it is known as method overriding in Java.
+
+A child class extends parent class , and If child class have same method as parent class ,
+only change method body implementation known as overriding concept 
+
+To achiving overriding concept we required two java classes with inheritance relationship.
+
+
+Rules for Java Method Overriding
+	1. The method must have the same name as in the parent class
+	2. The method must have the same parameter as in the parent class.
+	3. There must be an IS-A relationship (inheritance).
+
+
+Why can we not override static method?
+It is because the static method is bound with class whereas instance method is bound with 
+an object.Static belongs to the class area, and an instance belongs to the heap area.
+
+Can we override java main method?
+No, because the main is a static method.
+
+--------------------------------------------------------------------------------------------
+EX:
+sleep(1000)
+sleep(1000,2000)
+
+wait()
+wait(1000)
+wait(1000,2000)
+
+there are two type of polymorphism in java
+
+1) compile time polymorphism /static binding / early bionding
+      ex : method overloading
+
+2) Runtime polymorphism / dynamic binding / late binding.
+      ex : method overriding
+
+
+three type of overloading
+a. method overloading
+b. Constructor overloading
+c. Operator overloading
+
+Constructor Overloading:-
+The constructors are having same name but different argument list such type of constructors 
+are called Overloaded constructors.
+
+Operator overloading:-
+One operator can act as more than one form is called Operator overloading .
+the only operator overloaded in java language is ‘+’.
+Ex:- class Test 
+{
+public static void main(String[] args) 
+{
+String str1="Rattaiah";
+String str2="Durga";
+System.out.println(str1);
+System.out.println(str1);
+System.out.println(str1+str2);
+int a=10;
+int b=20;
+System.out.println(a);
+System.out.println(b);
+System.out.println(a+b);
+}
+}

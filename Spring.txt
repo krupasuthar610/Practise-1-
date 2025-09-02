@@ -1,0 +1,106 @@
+1)Spring?
+It is a lightweight, loosely coupled and integrated framework for developing enterprise applications in java.
+
+2)Advantages of spring framework?
+Lightweight – Uses less memory and is faster.
+Modular – You can use only the parts you need.
+Dependency Injection (DI) – Makes code loosely coupled and easy to manage.
+AOP (Aspect-Oriented Programming) – Helps with logging, security, and transactions.
+Integrated ORM Support – Works well with Hibernate, JPA, etc.
+Spring MVC – Simplifies web application development.
+Spring Boot – Helps in fast development with minimal configuration.
+Security – Provides built-in authentication and authorization.
+Transaction Management – Handles database transactions efficiently.
+Microservices Support – Ideal for building scalable microservices.
+
+3) What are the modules of spring framework?
+Test
+Spring Core Container
+AOP, Aspects and Instrumentation
+Data Access/Integration
+Web
+
+4)What is IOC and DI?
+Inversion of Control (IoC)
+IoC is a design principle where the control of object creation and dependency management is given to the Spring container, rather than being manually managed in the code.
+
+Dependency Injection (DI)
+DI is a technique used in IoC where dependencies (objects) are injected into a class by the Spring container instead of the class creating them itself.
+
+5)What is the role of IOC container in spring?
+Role of IoC Container in Spring
+The IoC (Inversion of Control) Container is responsible for managing the lifecycle and dependencies of Spring beans. It automates object creation, dependency injection, and configuration.
+
+Main Responsibilities:
+Object Creation – Creates and manages beans automatically.
+Dependency Injection (DI) – Injects dependencies into beans to reduce tight coupling.
+Lifecycle Management – Initializes, configures, and destroys beans as needed.
+Configuration Management – Loads configurations from XML, annotations, or Java-based configurations.
+AOP (Aspect-Oriented Programming) Support – Handles cross-cutting concerns like logging and security.
+
+
+6)Types of IoC Containers in Spring:
+
+BeanFactory 
+Lightweight container, suitable for simple applications.
+Basic IoC container
+Lazy initialization (loads beans only when requested)
+
+ApplicationContext
+More advanced container with additional features like event propagation and internationalization.
+Advanced IoC container
+Eager initialization (loads all beans at startup)
+
+
+7)What is autowiring in spring? What are the autowiring modes?
+Autowiring in Spring
+Autowiring is a feature in Spring that automatically injects dependencies into beans, reducing manual configuration. It simplifies development by letting the Spring container resolve and inject the required beans automatically.
+
+Autowiring Modes:
+no (default): No autowiring. Dependencies are defined explicitly in the configuration.
+
+byName :
+Injects bean based on the property name.
+The container looks for a bean with the same name as the property.
+
+byType:
+Injects bean based on the property type.
+The container looks for a bean matching the property type.
+
+constructor:
+Injects dependencies via constructor.
+Useful for mandatory dependencies.
+
+autodetect (Deprecated):
+Chooses constructor if a default constructor is present, otherwise byType.
+
+
+8)What are the different bean scopes in spring?
+
+9)What are the transaction management supports provided by spring?
+Spring framework provides two type of transaction management supports:
+Programmatic Transaction Management: should be used for few transaction operations.
+Declarative Transaction Management: should be used for many transaction operations.
+
+
+10)What are the advantages of JdbcTemplate in spring?
+Advantages of JdbcTemplate in Spring:
+Less Boilerplate Code – Eliminates the need for writing repetitive JDBC code.
+Automatic Resource Management – Handles opening and closing of connections automatically.
+Exception Handling – Converts SQL exceptions into Spring DataAccessException.
+Improved Performance – Uses prepared statements efficiently.
+Readable and Maintainable – Simplifies query execution and result processing.
+Supports Parameterized Queries – Prevents SQL injection.
+Easy Integration – Works well with Spring transaction management.
+
+11)What are classes for spring JDBC API?
+JdbcTemplate for basic queries.
+NamedParameterJdbcTemplate for better readability.
+SimpleJdbcInsert & SimpleJdbcCall for insert and stored procedures.
+RowMapper for mapping query results to objects.
+
+
+12)What is AOP?    
+when we want to something show or exicute beetween the project we use AOP fnctionality
+
+                        

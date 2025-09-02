@@ -1,0 +1,66 @@
+1. Tell me the difference between Method Overloading and Method Overriding in Java.
+This is one of the core Java interview questions for mid-experienced professionals.
+Method Overloading is used to increase the program’s readability. It has the same method name but different parameters.
+Method Overriding provides the specific implementation of the method. It has the same method and same parameters.
+
+2. What do you mean by the class loader in Java? 
+In the Java Virtual Machine (JVM), the class loader is a type of subsystem. It is used for loading class files. When you run the program, it will be first loaded by the class loader. The built-in class loaders are of three types in Java-
+infographic depicting three types Java class loaders; bootstrap, extension, and system application classloader
+The Bootstrap Classloader is the first-class loader in JVM. It is the superclass of the Extension class loader. It loads the rt.jar file that constitutes all the class files of Java Standard Edition. The files being java.lang package classes, java.net package classes, java.util packages classes, java.io packages classes, java.sql packages classes, etc.
+The Extension Classloader is the class loader of Bootstrap and the parent class loader of the system classloader. It generally loads the jar files located inside the $JAVA_HOME_/jre/lib/ext directory.
+The System Application Classloader is the type child class loader of the Extension class loader. From the cross path, the System Application Classloader loads the class files. It is by default; the classpath is set to the current directory. Therefore, it is also called the Application class loader.
+
+4. Why can we not override the static method in Java?
+This is one of the core Java programming interview questions for experienced professionals in the Java interview. 
+The reasons why we cannot override the static method in Java are :
+(a) The static method does not belong to the object level. Instead, it belongs to the class level. The object decides which method can be called in the method overriding.
+(b) In the static method, which is the class-level method, the type reference decides which method to call without referring to the object. It concludes that the called method is determined at the compile time.
+If any child class defines the static method with the same signature as the parent class, then the method in the child class hides the method in the parent class.
+
+5. Can you tell us what the Dynamic Method Dispatch is in Java? 
+The Dynamic method dispatch is a process through which a call towards an overridden method is solved at a run time. It is the object that is being referred to, not the type reference variable. It decides which version of the overridden method needs to be executed.
+
+6. What is a Java ClassPath?
+A Java ClassPath is an environment variable that the Java Virtual Machine (JVM) uses to collect all classes used by the program.
+
+7. What can be stated as a volatile keyword in Java?
+If a variable is marked as volatile, it can be read from the main memory instead of the cache memory.
+
+8. Where does the final block not execute in Java?
+To this Java interview question, you can answer it by saying; There is only one case where the final block does not execute in Java. The final block does not execute when you run System.exit(0) in the try or catch block in the Java programs.
+
+9. What are the major points of distinction between StringBuffer and StringBuilder in Java?
+A StringBuffer is thread-safe. Therefore, simultaneously two threads cannot call the methods of StringBuffer. On the other hand, in comparison to StringBuffer, a StringBuilder is not known to be thread-safe. Hence, it means that two threads can call the methods of StringBuilder at the same time.
+On the basis of performance StringBuffer’s performance is less efficient as it is thread-safe. Whereas StringBuilder’s performance is more efficient as it is not thread-safe.
+
+10. Can you tell the difference between the Vector and ArrayList in Java?
+You can answer this Java interview question by listing the differences between the vector and the ArrayList.
+(a) The common difference between the vector and the ArrayList in Java is that the vector is synchronized and thread-safe while the ArrayList is not.
+(b) Since vector is synchronized, it is slow, but since the ArrayList is not synchronized, it is comparatively faster
+
+11. Why is String immutable in Java?
+You can answer this Java interview question by saying there are several reasons why String is immutable or unchangeable in Java.
+String pool– if you assign a value to String using the double quotes (” “), it gets stored in the string literal pool area, and a single String can be referenced by several reference variables, which will make it affect all reference variables if the String becomes mutable.
+Classloading- String is used for the mechanism of class loading. If String becomes mutable, then it will become a security threat because anyone can hack it.
+Cache hash value– when you use String as a key in HashMap or any other collection, you can cache its hash value. You do not need to calculate each time as it will always be constant because the string is immutable.
+
+12. Can you tell the difference between the HashMap and HashSet in Java?
+This is one of the advanced Java Interview questions for 2 to 3 years of experience candidates. The interviewer will expect you to know the answer to this Java interview question.
+To answer this Java interview question, HashMap implements the Map interface, which maps keys to value. It is not synchronized, and it is not thread safe. Null keys and values are allowed, whereas duplicate keys are not allowed.
+HashMap<Integer,String> studentHashMap=new HashMap<Integer,String>();
+studentHashMap.put(1, “Anushka”);
+studentHashMap.put(2. “Akansha”);
+In the case of HashSet, it implements a Set interface that does not allow duplicate values. As a result, it is neither synchronized nor thread-safe.
+HashSet studentSet=new HashSet();
+studentSet.add(“Anushka”);
+studentSet.add(“Akansha”);
+studentSet.add(“Anjana”);
+
+14. How do you think we can create an immutable class in Java?
+An immutable class has only one state, and the constructor carefully instantiates it.
+To create an immutable class in Java, you can follow these steps-
+(a) You can make your class final so that no class will be able to extend that. Therefore, no one will be able to override methods in this class.
+(b) You can make your instance variables private, then any class will not be able to access instance variables. You can make the final so that you cannot change it.
+(c) You should not create a setter method for instance variables so that no explicit way will be there to change the state of the instance variables.
+(d) Initialize the variables in the constructor and take proper care while working with the mutable object. You must do the deep copy in the case of mutable objects.
+(e) You should return a clone of the object from the getter method so that it won’t return the original object. After that, your original object will be intact.

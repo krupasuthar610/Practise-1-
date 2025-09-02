@@ -1,0 +1,16 @@
+ Lambda Expressions
+
+
+a. it will reduce the byte code.
+b. length of the code also reduced.
+
+syntax : arguments -> expression
+
+
+* in lambda when we take the multiple print statements take that statements    in brasses.
+
+* taking arguments the type declaration is optional.
+
+* only return value is present, then specifying the return statement is optional.
+
+* 

@@ -1,0 +1,125 @@
+package com.exp.excptionHandling;
+/*
+public class NOTE {}
+
+
+Exception Handling
+
+a. program termminated abnormally
+b. rest of the application not executed.
+
+To overcome above problem handle the exception.
+   a. using try-catch
+   b. using throw
+
+
+here we will handle exception using try-catch:
+try{
+    Exception code: it may or may not raise an exception
+   }
+   catch(Exception-name ref-var)
+   {
+   Logics : these logics are executed when the exception 
+             raised in try-block. 
+}
+
+
+-----------------------------------------------------------------------------------------------------
+NOTE : 
+
+using throw keyword we can throw predefined exceptions &  userdefined  exception.
+but throwing predefined exception are not recommended because predefined exceptions are 
+having fixed meaning.
+
+
+try     : it contains exceptional code it may or may   not raise an exception.
+catch   : these logics are executed when exception raised in try block.
+finally : these logics are excecuted both normal & abnormal case.
+throws  : to delegate the responsibility of exception handling to caller method.
+throw   : used to throw the exception.
+
+
+Feature	           throw	                                                     throws
+Location           Inside the method body.	                                  In the method signature.
+Purpose	           To actually throw an exception.	                          To declare exceptions a method can throw.
+Type of Keyword    Used for throwing an exception explicitly.	                  Used for declaring possible exceptions.
+Example	           throw new Exception();	                                  void method() throws Exception {}
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+/*
+
+
+there are two ways to handle the exceptions,
+a. using try-catch
+b. using throws
+
+
+In Java, exceptions are categorized into two types:
+
+Checked Exceptions:
+Checked at compile time. The compiler ensures they are either caught or declared in the method signature
+using throws.     
+                    
+IOException
+Thrown when an I/O operation fails (e.g., file not found).
+FileNotFoundException, EOFException
+
+SQLException
+Occurs when there is a database access error.
+
+ClassNotFoundException
+Raised when the class loader cannot find a specified class.
+
+InterruptedException
+Thrown when a thread is interrupted while it's sleeping, waiting, etc.
+
+NoSuchMethodException
+Thrown when a method cannot be found.
+
+InvocationTargetException
+Occurs when a method invoked via reflection throws an exception.
+
+
+
+Unchecked Exceptions: 
+Occur at runtime. These are not checked by the compiler. They typically extend RuntimeException.
+
+ArithmeticException
+Occurs when an illegal arithmetic operation is performed (e.g., division by zero).
+
+NullPointerException
+Thrown when accessing an object reference that is null.
+
+ArrayIndexOutOfBoundsException
+Happens when accessing an array with an invalid index.
+
+StringIndexOutOfBoundsException
+Thrown when accessing a string using an invalid index.
+
+NumberFormatException
+Occurs when converting a string to a number fails (e.g., "abc".toInt()).
+
+IllegalArgumentException
+Raised when a method receives an invalid argument.
+
+ClassCastException
+Happens when trying to cast an object to a subclass it’s not an instance of.
+
+IllegalStateException
+Occurs when a method is invoked at an inappropriate time.
+
+
+
+NOTE :
+
+using throws can we delegate unchecked exception ?
+yes possible but not recommended, because unchecked exceptions are automatically propagated.
+
+* the checked exceptions are propagated using throws keyword.
+
+
+
+
+
+*/
+

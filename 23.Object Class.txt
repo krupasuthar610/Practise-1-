@@ -1,0 +1,32 @@
+Object class is the parent class of all Java classes.
+Every class in Java inherits from the Object class, directly or indirectly.
+
+
+Common Methods of Object Class:
+
+toString()
+Returns string representation of an object.
+➤ Example: System.out.println(obj.toString());
+
+equals(Object obj)
+Compares two objects for equality.
+➤ Example: obj1.equals(obj2)
+
+hashCode()
+Returns an integer hash code for the object.
+➤ Used in hashing (like HashMap).
+
+getClass()
+Returns the runtime class of the object.
+➤ Example: obj.getClass()
+
+clone()
+Creates and returns a copy (clone) of the object.
+➤ Must implement Cloneable interface.
+
+finalize()
+Called by Garbage Collector before object is destroyed.
+➤ Not commonly used.
+
+wait(), notify(), notifyAll()
+Used for thread communication in multithreading.

@@ -1,0 +1,510 @@
+🟩 1. Core Java & OOPs
+OOPs Concepts
+
+What are the 4 pillars of OOPs? Give real-life examples.
+
+Explain encapsulation with a real-life example.
+
+Explain inheritance with real-time examples.
+
+What type of inheritance is not supported in Java?
+
+What is the diamond problem and how is it resolved?
+
+Difference between is-a and has-a relationships.
+
+Basics and Language Features
+
+Difference between == and .equals() in Java.
+
+Are Strings immutable in Java? Why?
+
+Creating Strings using new vs literals.
+
+How are strings immutable in Java?
+
+What happens if an exception is not caught?
+
+Classes & Interfaces
+
+Can we override a static method?
+
+Where did you use abstract classes and interfaces in your project?
+
+Static Concepts
+
+Difference between static block, static method, static variable.
+
+🟩 2. Java Collections Framework
+Explain the internal working of HashMap.
+
+Difference: HashMap vs TreeMap vs LinkedHashMap.
+
+Difference: HashSet vs LinkedHashSet vs TreeSet.
+
+Difference between ArrayList and LinkedList.
+
+Difference between Collections and Collection.
+
+Iterator vs ListIterator.
+
+Role of Comparable and Comparator.
+
+Explain hash collision and how to handle it.
+
+Difference between Hashtable and ConcurrentHashMap.
+
+
+
+🟩 4. Exception Handling
+What are exceptions in Java?
+
+Checked vs Unchecked exceptions.
+
+Base class of all exceptions?
+
+Purpose of try-catch-finally.
+
+Difference between throw and throws.
+
+Exception propagation.
+
+How do you rethrow exceptions in Java?
+
+How to create a custom exception?
+
+Global Exception Handling in Spring Boot using @ControllerAdvice.
+
+🟩 5. Java 8 & Functional Programming
+Java 8 Features: Lambdas, Streams, Functional Interfaces.
+
+What are functional interfaces?
+
+What is a marker interface?
+
+How to create an immutable class?
+
+Stream operations: map, filter, reduce, collect.
+
+Write logic to print student names with marks > 90 using Streams.
+
+Frequency count using Streams.
+
+🟩 6. Spring & Spring Boot
+Difference: @Controller vs @RestController.
+
+Difference: @Bean vs @Component.
+
+Difference: @Component vs @Service vs @Repository.
+
+Dependency Injection: Constructor vs Setter vs Field.
+
+What are Spring bean scopes?
+
+Use of annotations: @Qualifier, @Primary, @Value, @Transactional.
+
+Spring Boot starter parent — purpose?
+
+Spring Profiles configuration.
+
+Exception Handling with @ExceptionHandler, @ControllerAdvice.
+
+How to secure REST APIs in Spring Boot (JWT/Auth).
+
+How to use RestTemplate.
+
+🟩 7. Microservices Architecture
+Microservices vs Monolithic architecture.
+
+Service Discovery with Eureka/Consul.
+
+How does Load Balancing work?
+
+API Gateway (Zuul / Spring Cloud Gateway).
+
+What is Circuit Breaker pattern?
+
+What is Saga pattern?
+
+Config Server in Spring Cloud.
+
+JWT / OAuth2 for secure microservices.
+
+Exception handling across services.
+
+Communication: Sync vs Async, Kafka, RabbitMQ.
+
+Orchestration vs Choreography.
+
+How to configure multiple databases in Spring Boot.
+
+Design patterns in microservices.
+
+🟩 8. REST APIs & Web Services
+What is REST API? Principles?
+
+REST API status codes: 200, 201, 204, 400, 401, 403, 404, 500.
+
+POST vs PUT vs PATCH — differences.
+
+Idempotency in REST.
+
+Best practices for REST API design.
+
+Versioning REST APIs.
+
+@RequestParam vs @PathVariable vs @RequestBody.
+
+CORS handling.
+
+Pagination in REST APIs.
+
+REST response formats: Success & Error.
+
+How to send HTTPS request from one service to another.
+
+Swagger/OpenAPI usage.
+
+How to reduce API response time.
+
+🟩 9. JPA / Hibernate
+ORM Principles and entity relationships.
+
+Lazy vs Eager loading.
+
+CrudRepository vs JpaRepository.
+
+Query optimization & caching strategies.
+
+🟩 10. Database & SQL
+ACID principles and CAP theorem.
+
+SQL optimization: Indexing, Joins, Stored Procedures.
+
+Difference: DELETE vs TRUNCATE.
+
+WHERE vs HAVING.
+
+Aggregate functions.
+
+Joins: INNER, LEFT, RIGHT, FULL.
+
+IN vs EXISTS vs JOIN.
+
+Find second highest salary using SQL.
+
+Dept-wise employee count.
+
+Count duplicates in a table.
+
+🟩 11. Reactive Programming
+Project Reactor vs RxJava.
+
+What is backpressure?
+
+Reactive Streams: Event-driven non-blocking IO.
+
+When to use CompletableFuture.
+
+🟩 12. Testing
+What is JUnit?
+
+JUnit test lifecycle methods.
+
+How to use @BeforeEach, @AfterEach, etc.
+
+Mockito: @Mock vs @InjectMocks.
+
+How to write unit test cases.
+
+🟩 13. Coding Challenges / DSA
+Reverse a linked list (code).
+
+First non-repeating character in a string.
+
+Reverse a string manually.
+
+Detect loop in a linked list.
+
+Second largest number in array.
+
+Check if a string is a palindrome.
+
+Longest substring without repeating characters.
+
+Armstrong number check.
+
+🟩 14. Scenario-Based Questions
+API returns 500 in production — how do you debug?
+
+You pushed code & it broke in production — first step?
+
+Memory leak — how to identify & fix?
+
+Client reports bug but QA missed it — what to do?
+
+NPE seen in logs but not locally — how to trace?
+
+Prevent frequent DB connection failures?
+
+🟩 15. File Handling & Mini Projects
+Program to find size of all files in a folder.
+
+Count characters, words, lines in a file.
+
+Merge two files into one.
+
+Parse financial CSV and generate monthly summary.
+
+Shopping cart CLI app with Add/Remove/View/Exit.
+
+-------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
+Java 8 Features (Lambdas, Streams, Functional Interfaces)
+
+Streams API — map, filter, reduce, collect
+
+Immutable Class — creation & advantages
+
+Marker Interface — what it is & use cases
+
+HashSet / HashMap — internal working
+
+HashSet vs LinkedHashSet / LinkedHashMap
+
+HashTable vs ConcurrentHashMap
+
+Custom Exceptions — creation & handling
+
+volatile vs Atomic variables
+
+Thread creation methods & lifecycle
+
+ThreadPool & ExecutorService
+
+Identifying & resolving Java memory leaks
+
+@Synchronized vs @Async
+
+CompletableFuture — async programming in Java
+
+Common Annotations: @Qualifier, @Value, @Transactional, @Component, @Primary, @Configuration
+
+Serializable vs Externalizable — differences & usage
+
+Immutability in Java — how to achieve
+
+HashMap collision handling
+
+transient keyword usage
+
+Checked vs Unchecked exceptions — differences & examples
+
+Thread-safe singleton using Enum
+
+ServiceLoader vs Dependency Injection — difference
+
+JVM string concatenation optimization with StringBuilder
+
+Callable vs Runnable — difference
+
+ThreadLocal — purpose & example
+
+2. Java Practice Programs
+Odd/Even number range program
+
+Multiplication table generator
+
+Fibonacci series up to given number
+
+Find min & max in list without sorting
+
+Replace given number
+
+Sum digits of a number
+
+Swap strings without temp variable
+
+Find duplicates in array
+
+Find unique numbers in array
+
+Numbers greater than average in array
+
+Separate even/odd numbers
+
+Print patterns
+
+Days to years/weeks/days conversion
+
+Vowel/consonant case changer
+
+Frequency count of letters/digits in string
+
+Check if string has all unique words
+
+Count words in paragraph
+
+Reverse sentence
+
+Count letters, spaces, numbers in string
+
+Extract digits & alphabets separately
+
+String rotation check
+
+Anagram check
+
+Show amount in words (up to 4 digits)
+
+Email validation with regex
+
+Command-line calculator with error handling
+
+3. Spring & Spring Boot
+Bean Scopes — singleton, prototype, request, session
+
+IoC Container & Dependency Injection types (constructor, setter, field)
+
+Spring Profiles — environment configs
+
+Exception Handling — @ExceptionHandler, @ControllerAdvice
+
+CRUD & JPA repositories — differences & usage
+
+RestTemplate usage
+
+JWT & Auth Token — implementation & flow
+
+Multiple DB configuration in Spring Boot
+
+4. Microservices
+What are microservices?
+
+Key features of microservice architecture
+
+Microservices vs monolithic architecture
+
+Advantages & disadvantages of microservices
+
+Challenges introduced by microservices
+
+Spring Boot in microservices — role
+
+Spring Cloud in microservices — role
+
+Creating a simple microservice using Spring Boot
+
+Role of @RestController in microservices
+
+Dependency injection in microservices
+
+Communication between microservices
+
+What is REST & why used in microservices
+
+Feign Client — purpose & benefits
+
+Service registry & discovery — Eureka usage
+
+Load balancing — Ribbon & Spring Cloud LoadBalancer
+
+Circuit Breaker — Resilience4j / Hystrix
+
+Handling failures in microservices
+
+Securing communication between microservices
+
+OAuth2 in microservices security
+
+Database per microservice — handling
+
+Transactions across multiple services — Saga, 2PC
+
+Containerization — Docker role
+
+Configuration management — Spring Cloud Config
+
+Logging, monitoring, tracing — ELK, Zipkin, Sleuth
+
+Deployment & scaling — Kubernetes, Docker Compose
+
+5. Microservices Architecture
+Service discovery — Eureka, Consul
+
+Load balancing, distributed tracing, circuit breaking
+
+API Gateway — Zuul, NGINX
+
+Asynchronous communication — Kafka, RabbitMQ
+
+6. RESTful Web Services
+REST principles, API building
+
+JSON/XML handling
+
+API versioning, OpenAPI/Swagger documentation
+
+7. Java I/O & NIO
+Blocking vs non-blocking I/O
+
+Asynchronous I/O, channels, selectors
+
+File handling, serialization, deserialization
+
+8. Reactive Programming
+Project Reactor, RxJava
+
+Event-driven architecture, backpressure
+
+Reactive streams, non-blocking I/O
+
+9. JPA/Hibernate
+ORM principles, entity relationships
+
+Lazy vs eager loading
+
+Caching strategies, query optimization
+
+10. Database Optimization
+SQL optimization, indexing, transactions
+
+NoSQL (MongoDB, Cassandra)
+
+ACID principles, CAP theorem
+
+11. Distributed Systems
+CAP theorem — consistency, availability, partitioning
+
+Event sourcing, CQRS
+
+Distributed caching — Redis, Hazelcast
+
+Tools — Apache ZooKeeper, Consul, etcd
+
+12. Testing & TDD/BDD
+Unit testing — JUnit, Mockito
+
+Integration & functional testing
+
+Behavior-driven development — Cucumber
+
+13. CI/CD & DevOps
+Continuous integration — Jenkins, CircleCI
+
+Containerization — Docker
+
+Orchestration — Kubernetes
+
+Git, versioning, branching strategies
+
+14. Java Best Practices
+Avoiding == for object comparison — use .equals()
+
+Closing resources with try-with-resources
+
+Using Optional instead of returning null
+
+Favoring immutability — using final
+
+Avoiding business logic in controllers

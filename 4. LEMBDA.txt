@@ -1,0 +1,7 @@
+🆚 Lambda vs Method Reference
+  
+Feature               	 Lambda Expression	                                     Method Reference
+Syntax	                 (args) -> expression	                                ClassName::methodName
+Purpose	       Defines an inline implementation of a functional interface	    Refers to an existing method that matches a functional interface
+Verbosity	   Slightly more verbose	                                        More concise and readable
+Flexibility	   You can add logic inside	                                    Only points to existing methods, no extra logic

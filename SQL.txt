@@ -1,0 +1,88 @@
+1. SQL Basics
+
+DQL (Data Query Language)
+SELECT, WHERE, GROUP BY, ORDER BY, HAVING.
+Aggregate functions: COUNT(), SUM(), AVG(), MAX(), MIN().
+
+DDL (Data Definition Language)
+CREATE, ALTER, DROP, TRUNCATE, RENAME.
+
+DML (Data Manipulation Language)
+INSERT, UPDATE, DELETE.
+
+TCL (Transaction Control Language)
+COMMIT, ROLLBACK, SAVEPOINT, SET TRANSACTION.
+
+DCL (Data Control Language)
+GRANT, REVOKE.
+
+--------------------------------------------------------------------------------
+2. Advanced SQL Concepts
+Joins
+
+Types: INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN, CROSS JOIN.
+Subqueries and Nested Queries
+
+Using subqueries in SELECT, FROM, WHERE.
+Set Operations 
+
+UNION, UNION ALL, INTERSECT, EXCEPT.
+Window Functions
+
+Functions like ROW_NUMBER(), RANK(), DENSE_RANK(), NTILE(), OVER().
+Common Table Expressions (CTEs)
+
+Using WITH for query organization.
+
+--------------------------------------------------------------------------------
+3. Indexing and Query Optimization
+Understanding indexes and when to use them.
+Analyzing query performance with EXPLAIN or EXPLAIN PLAN.
+Optimizing slow queries (e.g., avoiding full table scans).
+Using database normalization principles.
+
+-----------------------------------------------------------------------------------
+4. Stored Procedures and Functions
+Writing stored procedures with CREATE PROCEDURE.
+Writing functions with CREATE FUNCTION.
+Handling parameters: IN, OUT, INOUT.
+Benefits: encapsulation of logic and performance optimization.
+
+-----------------------------------------------------------------------------------------------------
+5. Transactions
+ACID properties (Atomicity, Consistency, Isolation, Durability).
+Managing transactions programmatically in Java using JDBC.
+Understanding isolation levels: READ UNCOMMITTED, READ COMMITTED, REPEATABLE READ, SERIALIZABLE.
+
+---------------------------------------------------------------------------------------------------------------
+6. Constraints
+Primary Key, Foreign Key, Unique, Not Null, Default, Check constraints.
+Handling cascading actions with ON DELETE and ON UPDATE.
+
+------------------------------------------------------------------------------------------------------------------
+7. Views
+Creating and managing views with CREATE VIEW and DROP VIEW.
+Benefits of views: abstraction and security.
+
+---------------------------------------------------------------------------------------------------
+8. Database Connectivity in Java
+JDBC (Java Database Connectivity) API:
+Connecting to a database.
+Executing SQL queries.
+Handling exceptions.
+Using PreparedStatement to prevent SQL injection.
+Using connection pooling for performance (HikariCP or Apache DBCP).
+
+-------------------------------------------------------------------------------------------------------
+9. ORM Frameworks
+Basics of Object-Relational Mapping (ORM) tools like Hibernate or JPA.
+Writing HQL/JPQL queries.
+Handling entity relationships: One-to-One, One-to-Many, Many-to-Many.
+
+-----------------------------------------------------------------------------------------------------------
+10. NoSQL Basics (Optional)
+Overview of NoSQL databases (e.g., MongoDB, Cassandra).
+Understanding when to use NoSQL over relational databases.
+
+-------------------------------------------------------------------------------------------------------------------
+

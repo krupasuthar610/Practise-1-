@@ -1,0 +1,80 @@
+1)What is difference between GenericServlet and HttpServlet?
+
+GenericServlet
+Purpose:    A general-purpose servlet class to handle any type of protocol.
+Extends:    javax.servlet.GenericServlet.
+Use Case:   Suitable for protocols other than HTTP (e.g., FTP).
+Methods:    Requires overriding the service(ServletRequest req, ServletResponse res) method.
+
+HttpServlet
+Purpose:   Specialized for handling HTTP requests.
+Extends:   javax.servlet.http.HttpServlet.
+Use Case:  Designed exclusively for web applications using HTTP.
+Methods:   Provides HTTP-specific methods like doGet(), doPost(), doPut(), and doDelete() for handling HTTP methods.
+
+
+2) What is the life-cycle of a servlet?
+Servlet is loaded
+servlet is instantiated
+servlet is initialized
+service the request
+servlet is destroyed
+
+
+3) What are the life-cycle methods for a servlet?
+Servlet Life-Cycle Methods
+
+init()
+Called once when the servlet is first loaded.
+Used for initialization (e.g., setting up resources).
+
+service()
+Called for every request to the servlet.
+Handles client requests and provides responses.
+Can be overridden in GenericServlet or HttpServlet (e.g., doGet(), doPost()).
+
+destroy()
+Called once before the servlet is unloaded.
+Used to release resources (e.g., closing connections).
+
+Life-Cycle Flow:
+Servlet Loaded → init()
+Client Request → service()
+Servlet Unloaded → destroy()
+
+In short, init(), service(), and destroy() are the key servlet life-cycle methods.
+
+
+6) What is difference between Get and Post method?
+Aspect	                       GET Method	                                       POST Method
+Purpose	               Sends data in the URL as query parameters.	       Sends data in the request body.
+Visibility	           Data is visible in the URL.	                       Data is hidden (not visible in the URL).
+Data Size              Limited (depends on URL length, ~2KB).	           Large data can be sent.
+Security	           Less secure (data is exposed in URL).	           More secure (data sent in body).
+Use Case	           Fetching data (e.g., search queries).	           Submitting sensitive data (e.g., forms).
+Caching            	   Easily cached by browsers and servers.	           Not cached.
+Idempotent	           Yes (repeated requests have the same result).	   No (repeated requests may change the state).
+
+
+
+DispatcherServlet
+The DispatcherServlet is the front controller in the Spring Framework for handling web requests and responses in a Spring MVC application.
+
+Responsibilities:
+Request Handling: Receives all incoming HTTP requests and acts as a central dispatcher.
+Request Routing: Routes the requests to the appropriate Controller based on the URL and configuration.
+Integration: Works with other Spring components like interceptors, view resolvers, and exception handlers.
+Response Rendering: Determines the appropriate view (e.g., JSP, HTML, JSON) and renders the response.
+
+Key Features:
+Centralized Control: Simplifies web request processing by centralizing all request handling.
+Customizable: You can configure DispatcherServlet via XML or Java-based Spring configurations.
+Built-in Support: Works with annotations like @Controller, @RequestMapping, and more.
+
+Flow:
+Client Request → DispatcherServlet
+Mapping → Finds the appropriate controller (via a handler mapping).
+Business Logic → Delegates processing to the mapped controller.
+View Rendering → DispatcherServlet resolves the view and sends a response back to the client.
+
+In short, DispatcherServlet is the backbone of the Spring MVC web framework, coordinating requests, controllers, and views in a Spring application.

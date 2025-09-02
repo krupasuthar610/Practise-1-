@@ -1,0 +1,114 @@
+JAVA 8 
+
+Lambda Expressions
+Functional Interfaces
+Streams API
+Default and Static Methods in Interfaces
+Optional Class
+New Date and Time API (java.time package)
+Collectors and Aggregate Functions in Streams
+
+------------------------------------------------
+1. What is a Lambda Expression in Java 8?
+A Lambda Expression in Java 8 is a concise way to write anonymous functions. It allows writing functional-style code by reducing boilerplate for interfaces with a single method (Functional Interfaces).
+
+Syntax:
+(parameter) -> { expression or statements }
+
+Example:
+// Traditional way using an anonymous class
+Runnable r1 = new Runnable() {
+    public void run() {
+        System.out.println("Hello, World!");
+    }
+};
+
+// Using Lambda Expression
+Runnable r2 = () -> System.out.println("Hello, World!");
+
+-----------------------------------------------------------
+2. What is a Functional Interface in Java 8?
+
+A Functional Interface in Java is an interface that has only one abstract method. It can have multiple default or static methods. Functional interfaces enable the use of Lambda Expressions.
+
+@FunctionalInterface
+interface MyFunctionalInterface {
+    void show();  // Single abstract method
+}
+
+// Using Lambda Expression
+MyFunctionalInterface obj = () -> System.out.println("Hello, Functional Interface!");
+obj.show();
+
+Common Functional Interfaces (Java 8):
+✔ Runnable – void run()
+✔ Callable<T> – T call()
+✔ Consumer<T> – void accept(T t)
+✔ Supplier<T> – T get()
+✔ Predicate<T> – boolean test(T t)
+✔ Function<T, R> – R apply(T t)
+
+Functional Interfaces help in writing clean, concise, and functional-style code using Lambdas and Streams. 🚀
+
+------------------------------------------------------------------------------------------------------------------
+3. What are Default and Static Methods in Java 8?
+
+In Java 8, Default and Static methods were introduced in interfaces to add new functionality without breaking existing implementations.
+
+1️ Default Methods (Instance Methods in Interfaces)
+✅ Defined in an interface using the default keyword.
+✅ Provides a default implementation.
+✅ Can be overridden by implementing classes.
+
+2️ Static Methods (Utility Methods in Interfaces)
+✅ Defined using the static keyword.
+✅ Cannot be overridden.
+✅ Called using the interface name.
+
+---------------------------------------------------------------------------------------------
+4. What is the Streams API in Java 8?
+The Streams API is used for processing collections in a functional style. It helps in filtering, mapping, and reducing data efficiently.
+
+List<String> names = Arrays.asList("John", "Jane", "Tom", "Jerry");
+List<String> filteredNames = names.stream()
+    .filter(name -> name.startsWith("J"))
+    .collect(Collectors.toList());
+System.out.println(filteredNames); // [John, Jane, Jerry]
+
+----------------------------------------------------------------------------------
+6. Difference Between Collection API and Streams API?
+
+Use Collections when storing and modifying data.
+Use Streams when processing and filtering data efficiently. 🚀
+
+Using Collection API (For Loop)
+List<String> list = Arrays.asList("Java", "Python", "C++");
+for (String s : list) {
+    if (s.startsWith("J")) {
+        System.out.println(s);
+    }
+}
+
+Using Streams API (Functional Approach)
+list.stream()
+    .filter(s -> s.startsWith("J"))
+    .forEach(System.out::println);
+	
+-----------------------------------------------------------------------------
+7. What is the purpose of the Optional class?
+Optional<T> is used to avoid NullPointerException and handle null values gracefully.
+
+Optional<String> optional = Optional.ofNullable(null);
+System.out.println(optional.orElse("Default Value")); // Default Value
+
+----------------------------------------------------------------------
+8.New Date and Time API (java.time package)
+Java 8 introduced a new Date and Time API in the java.time package to overcome issues with the old java.util.Date and java.util.Calendar.
+
+Key Features & Advantages:
+✅ Immutable & Thread-Safe (Unlike Date & Calendar)
+✅ Fluent & Readable API
+✅ Better Time Zone Support
+✅ No More SimpleDateFormat Issues
+
+------------------------------------------------------------------------------

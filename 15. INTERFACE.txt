@@ -1,0 +1,24 @@
+INTERFACE
+
+* interface are used to declare the functionalities of the project.
+* declare the interface using interface keyword
+* interface also .class file are generated
+
+inteface are by default : abstract
+interface methods are by default : public abstract
+interface v. are by default : bublic static final
+
+interface Bank   //abstract
+{ 
+	int limit = 4000;  //public static final
+	void role();      //public abstract
+}
+
+
+interface contains multiple implementation classes.
+inside the interface :
+  not possible to declare instance v.
+  constructor not allowed
+  instance, static, block are not possible.
+  miani method not allowed.
+  

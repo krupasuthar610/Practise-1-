@@ -1,0 +1,199 @@
+1. What is JDBC?
+JDBC (Java Database Connectivity) is an API that enables Java applications to connect and interact with databases using SQL.
+
+2. What are the main components of JDBC?
+**Driver
+------------------------------------------------------------------------------------------------------------------------------------------------
+1)what is hibernate and why to use it ?
+is an Object-relational mapping (ORM) tool used to map java objects and database tables.
+
+its provide JPA implementation hence we can use JPA annotations as well as xml configurations to achieve this mapping.
+
+2)why hibernate ?
+hibernate eliminates all the boiler-plate code that comes with JDBC.
+it supports HQL (Hibernate Query Language) with is more Object oriented.
+it provides transaction management implicitly.
+hibernate throws JDBCException or HibernateException which are the unchecked exceptions, so we don't need to worry about handling using try catch.
+hibernate supports caching for better performance.
+
+
+3)important interface used in hibernate 
+Session:
+Main interface for interacting with the database.
+Used to perform CRUD operations.
+
+SessionFactory:
+Provides Session objects.
+Responsible for creating and managing database connections.
+
+Transaction:
+Manages database transactions.
+Ensures consistency and rollback in case of failure.
+
+Query:
+Used to write HQL queries.
+Executes select, update, and delete operations.
+
+Criteria:
+Provides an API to build dynamic and type-safe queries.
+Replaced by CriteriaQuery in JPA.
+
+Configuration:
+Used to configure Hibernate.
+Reads hibernate.cfg.xml or annotations to set up Hibernate.
+
+
+4)annotations used in hibernate 
+@Entity
+Marks a class as a Hibernate entity (mapped to a database table).
+
+@Table
+Specifies the table name in the database.
+Example: @Table(name = "employee").
+
+@Id
+Marks a field as the primary key of the table.
+
+@GeneratedValue
+Specifies the primary key generation strategy.
+Example: @GeneratedValue(strategy = GenerationType.IDENTITY).
+
+@Column
+Maps a field to a specific column in the table.
+Example: @Column(name = "emp_name", nullable = false).
+
+@Transient
+It means the field is present in the object (Java class) but does not have a corresponding column in the database table.
+
+@OneToOne
+Defines a one-to-one relationship between entities.
+
+@OneToMany
+Defines a one-to-many relationship.
+
+@ManyToOne
+Defines a many-to-one relationship.
+
+@ManyToMany
+Defines a many-to-many relationship.
+
+@JoinColumn
+Specifies the foreign key column for a relationship.
+Example: @JoinColumn(name = "department_id").
+
+
+5) List some of the databases supported by Hibernate.
+DB2
+MySQL
+Oracle
+Sybase SQL Server
+Informix Dynamic Server
+HSQL
+PostgreSQL
+FrontBase
+
+
+6)Mention two components of Hibernate configuration object.
+Database Connection
+Class Mapping Setup
+
+7)How is SQL query AND HQL query created in Hibernate? through 
+SQL(Structured Query Language) - Session.createSQLQuery
+HQL(Hibernate Query Language)  - Session.createQuery
+
+8) How can we add criteria to a SQL query?
+A criterion is added to a SQL query by using the Session.createCriteria.
+
+9) Define persistent classes.
+Classes whose objects are stored in a database table are called as persistent classes.
+
+10)Is SessionFactory a thread-safe object?
+Yes, SessionFactory is a thread-safe object, many threads cannot access it simultaneously.
+
+11) Is Session a thread-safe object?
+No, Session is not a thread-safe object, many threads can access it simultaneously. 
+
+12)What is the difference between session.save() and session.persist() method?
+Aspect	                            session.save()	                       session.persist()
+Return Value	             Returns the generated identifier.	      Does not return any value.
+Immediate Action	        Immediately inserts into DB (eager).	  Persists at flush/commit (deferred).
+
+
+13)What is the difference between get and load method?
+Aspect	                            get()	                                       load()
+Eager vs. Lazy	      Eagerly fetches the object immediately.	     Returns a proxy; fetches data lazily.
+Return on Absence	  Returns null if the entity is not found.	     Throws ObjectNotFoundException.
+Performance	          Direct database hit on invocation.	         Deferred database hit until accessed.
+Object Typ            Returns the actual entity object.	             Returns a proxy object.
+Use Case	          When you need the object immediately.	         When you're confident the object exists and prefer lazy loading.
+
+
+14)What is the difference between update and merge method?
+update() method                                                           
+Update means to edit something.                                            
+update() should be used if the session doesn't contain an already persistent state with the same id.
+It means an update should be used inside the session only. After closing the session, it will throw the error.
+			 
+merge() method			
+Merge means to combine something. 
+merge() should be used if you don't know the state of the session, means you want to make the modification at any time.
+
+15)What is HQL (Hibernate Query Language)?
+Hibernate Query Language is known as an object-oriented query language. It is like a structured query language (SQL).
+You don't need to learn SQL
+Database independent
+Simple to write a query
+
+16)What are the states of the object in hibernate?
+Transient State:
+The object is just created in memory.
+It’s not associated with the database or Hibernate session.
+Changes aren’t saved automatically.
+
+Persistent State:
+The object is associated with a Hibernate session.
+Changes made to it are automatically tracked and saved to the database.
+
+Detached State:
+The object was previously in a session, but the session is now closed or the object was evicted.
+It’s no longer automatically synchronized with the database, and changes need to be manually reattached using methods like merge() or update().
+
+
+17)What is the difference between first level cache and second level cache?
+
+1. First-Level Cache
+It’s always available (built-in) and works only inside one session.
+Imagine a temporary memory box for a single worker (session). Whatever that worker gets from the database is stored in their own box.
+If the worker needs the same data again, they’ll check their box first before going back to the database.
+
+Example:
+Open a session.
+Fetch data (go to the database and store the result in the cache).
+Fetch the same data again (this time it’s picked from the cache).
+When the session closes, the box (cache) disappears.
+
+2. Second-Level Cache
+It’s optional and must be configured explicitly.
+It works outside sessions, like a shared storage room that many workers (sessions) can access.
+If one session (worker) fetches data and stores it in the shared storage, another session can use that data later without fetching from the database again.
+
+Example:
+Worker A (Session 1) fetches data and saves it in the shared storage (second-level cache).
+Worker B (Session 2) can now read that data directly from the shared storage instead of going to the database.
+Even if multiple sessions are opened and closed, the shared storage remains available until you shut down the application.
+
+
+Feature	                    First-Level Cache	                            Second-Level Cache
+Scope	                        Per session	                                   Shared across multiple sessions
+Built-in or Not	                Built-in, always available	                   Needs configuration
+Sharing Data	                Not shared between sessions	                   Shared between all sessions
+Usage	                        Reduces database hits inside a session	       Reduces database hits across sessions
+
+
+Real-Life Analogy
+First-Level Cache: Think of it like a notebook that only one person (session) uses. When they close the notebook (session closes), all notes (cache) are gone.
+
+Second-Level Cache: Think of it as a library’s shared database that everyone can use. Even if one person stops working (session closes), the information remains available for others. 
+
+
+

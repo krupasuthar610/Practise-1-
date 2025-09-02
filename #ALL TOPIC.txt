@@ -1,0 +1,39 @@
+*  Core JAVA   
+*  collection q.  (theory & DSA)
+*  multiTreding q.
+*  Servlet         
+*  Spring         
+*  SPringMVC       
+*  SpringBoot     
+*  JDBC         
+*  Hibernate          
+*  Joins            
+       
+* java fetures 8, 11, 17  
+* strem API, lembda expression
+* java design paatorn 
+   (solid pattorn)
+
+* core java progarm
+  string 
+  array
+  collection 
+  flow control statement
+  spring boot crud with proper understanding
+  sql quvery
+-----------------------------------------------------------------
+javascript       
+react
+micro services
+payment getway
+AWS
+Devops,              
+mongo db              
+postgress sql        
+kafka                 
+
+----------------------------------------------------------------------
+1. spring boot crud with all understanding
+2. sql quvery learning 
+3. bject class and there method 
+4. Difference between abstract class and interface    

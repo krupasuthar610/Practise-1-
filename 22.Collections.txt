@@ -1,0 +1,189 @@
+1. collection
+In Java, a Collection is a framework that provides an architecture to store and manipulate a group of objects. It is part of the Java Collections Framework
+(JCF) and is located in the java.util package.
+
+Key Points about Collections in Java:
+Collections store objects (elements) in an organized way.
+They provide methods for inserting, deleting, searching, sorting, and manipulating data.
+Collections do not store primitive data types directly (e.g., int, double). Instead, you must use wrapper classes like Integer, Double, etc.
+The Collection interface is the root interface of the Java Collections Framework.
+
+
+---------------------------------------------------------------------------------------------
+Array & Collection
+
+A fixed-size data structure to store elements of same type
+Fixed (defined at the time of creation)
+Can store primitive types and objects
+Faster for simple, fixed-size operations
+No built-in methods beyond length and indexing
+Core Java (language-level feature)
+Using loops (for, enhanced for)
+Less flexible
+int[] arr = new int[5];
+
+
+An interface that represents a group of objects as a single unit
+Dynamic (can grow or shrink as needed)
+Can store only objects
+Slightly slower due to additional abstraction and features
+Provides many methods (add, remove, contains, etc.)
+java.util package (introduced in Java 1.2)
+Using Iterators, for-each, streams
+More flexible and powerful
+List<Integer> list = new ArrayList<>();
+
+----------------------------------------------------------------------------------------------------
+1. ArrayList 
+is a part of the Java collection framework 
+class of java.util package. 
+It provides us with dynamic arrays in Java.
+The main advantages of ArrayList are, if we declare an array then it’s needed to mention the size but in ArrayList, it is not needed to mention the size of ArrayList if you want to mention the size then you can do it.
+
+
+2. Collection & Collections 
+
+✅ Collection (Interface)
+Package: java.util
+Type: Interface
+Purpose: It's the root interface in the Java Collections Framework that represents a group of objects, known as elements.
+Subinterfaces: List, Set, Queue, etc.
+Implemented by: Classes like ArrayList, HashSet, LinkedList, etc.
+
+✅ Collections (Utility Class)
+Package: java.util
+Type: Final Class
+Purpose: It contains static utility methods to operate on or return collections, such as sorting, searching,
+reversing, synchronizing, etc.
+
+
+3. ArrayList & LinkedList 
+
+🔹 ArrayList
+Uses a dynamic array to store the data.
+Insertion operation is slower than LinkedList.
+Time Complexity: O(N)
+Manipulation with ArrayList is slower than LinkedList since it uses an array that requires shifting of elements in memory.
+Used to store similar data type elements.
+Memory is allocated at the compile time at the stack memory location.
+Contiguous memory is allocated to all the objects.
+
+🔸 LinkedList
+Uses a doubly linked list to store data.
+Insertion operation is faster than ArrayList.
+Time Complexity: O(1)
+Manipulation with LinkedList is faster than ArrayList as it does not require shifting of elements.
+Any type of data can be stored.
+Memory is allocated during the run time at the heap memory section.
+Contiguous memory is not allocated.
+
+
+4. Iterator & Enumeration
+
+Enumeration (Legacy Interface)
+Introduced in: Java 1.0 (part of legacy classes like Vector, Hashtable)
+Methods:
+hasMoreElements()nextElement()
+Only supports read-only access (can't remove elements).
+Faster than Iterator (since it's very simple and limited).
+Not fail-fast — it doesn't throw ConcurrentModificationException if collection is modified during traversal.
+Used with: Legacy collections like Vector, Stack, Hashtable.
+
+Iterator (Modern Interface)
+Introduced in: Java 1.2 (as part of the Java Collections Framework)
+Methods:
+hasNext()next()
+remove() — allows removing elements while iterating.
+Fail-fast — throws ConcurrentModificationException if the collection is structurally modified during iteration (except through the iterator's remove() method).
+Used with: All modern collection classes (e.g., ArrayList, HashSet, LinkedList, etc.)
+
+
+5. priority queue in Java?
+A PriorityQueue in Java is a queue data structure where elements are processed based on priority, not just insertion order.
+
+Key Features of PriorityQueue:
+
+Belongs to: java.util package.
+Implements: Queue interface.
+Default behavior: Min-heap — smallest element has the highest priority.
+You can change priority by providing a custom Comparator.
+Does NOT allow null elements.
+Not thread-safe (use PriorityBlockingQueue for thread safety).
+Duplicates are allowed.
+
+
+6.difference between List, set, and map in java?
+
+
+7.  difference between Queue and Stack?
+
+Queue
+Order: Follows FIFO (First In, First Out) principle.
+Insertion: Performed at the rear (tail).
+Removal: Performed from the front (head).
+Use Cases: Scheduling tasks, handling requests in web servers, breadth-first search (BFS).
+
+Stack
+Order: Follows LIFO (Last In, First Out) principle.
+Insertion: Performed at the top.
+Removal: Also from the top.
+Use Cases: Backtracking, function call stack, depth-first search (DFS).
+
+
+8.hashCode()?
+hashCode() method returns the hashcode value as an Integer. It is defined in the Java Object class which computes the hash values of given input objects.
+Hashcode value is mostly used in hashing-based collections like HashMap, HashSet, HashTable….etc. This method must be overridden in every class which
+overrides the equals() method.
+
+9. Difference Between Iterator and ListIterator
+Feature	                                  Iterator	                                                        ListIterator
+Applicable Collections	          Can be used for List, Set, and Queue.	                             Only applicable for List (like ArrayList, LinkedList).
+Direction of Traversal    	  Only allows forward traversal.	                             Allows both forward and backward traversal.
+Add Elements	                  Cannot add elements while iterating.	                             Can add elements using add() method.
+Modify Elements	                  Can remove elements using remove(), but no direct modification.    Can modify elements using set().
+Methods Available	          hasNext(), next(), remove()	                                     hasNext(), next(), remove(), hasPrevious(), previous(), add(), set()
+Index Position Tracking	          Does not provide index-based access.	                             Provides nextIndex() and previousIndex() methods.
+
+
+10. Difference Between Comparable and Comparator
+
+Feature	                             Comparable	                                                     Comparator
+Purpose	               Used to define the natural ordering of objects.                   	Used for custom ordering of objects.
+Package	               java.lang (part of core Java).	                                        java.util (part of Java Collections Framework).
+How to Implement?      Implements Comparable<T> interface in the class itself.	                Implements Comparator<T> interface in a separate class.
+Method to Implement    compareTo(T o)	                                                        compare(T o1, T o2)
+Modifies the Class?    Yes, requires modifying the class to implement Comparable<T>.	        No, does not modify the original class; sorting logic is kept separate.
+Used By	               Collections.sort(List<T>), TreeSet, TreeMap.	                        Collections.sort(List<T>, Comparator<T>), TreeSet(Comparator), TreeMap(Comparator).
+Flexibility	       Only one sorting logic can be defined per class.	                        Multiple sorting strategies can be defined for the same class.
+
+
+11. Fail-Fast and Fail-Safe Iterators in Java
+
+Feature	                                  Fail-Fast Iterator	                                  Fail-Safe Iterator
+Exception Handling	    Throws ConcurrentModificationException	                    Does not throw an exception
+Underlying Collection	    Directly operates on the original collection	            Works on a cloned copy
+Performance	            Faster, less memory overhead	                            Slower, more memory usage
+Thread-Safety	            Not thread-safe	                                            Thread-safe
+Modification During
+Iteration	            Not allowed	                                                     Allowed
+Used In	                    ArrayList, HashMap, HashSet, etc.	                             CopyOnWriteArrayList, ConcurrentHashMap, etc.
+
+
+-------------------------------------------------------------
+
+List and Set in Java
+Collection and Collections 
+Array and ArrayList 
+ArrayList and LinkedList 
+HashSet and LinkedHashSet 
+HashSet and TreeSet
+HashSet vs LinkedHashSet vs TreeSet 
+HashMap and HashTable 
+HashSet and HashMap
+HashMap vs LinkedHashMap 
+HashMap, LinkedHashMap, and TreeMap 
+Collections vs Streams 
+How does the Size of the ArrayList Increase Dynamically?
+How To Remove Duplicate Elements From ArrayList In Java?
+
+

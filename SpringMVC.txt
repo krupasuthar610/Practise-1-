@@ -1,0 +1,68 @@
+1)What is MVC?
+MVC (Model-View-Controller) is a design pattern used in software development to separate concerns:
+Model: Manages data and business logic.
+View: Displays the data (UI).
+Controller: Handles user input and updates the Model & View.
+
+2)What is Spring MVC?
+Spring MVC is a framework in the Spring ecosystem used to build web applications following the Model-View-Controller (MVC) pattern.
+It simplifies development by providing built-in features like:
+
+✅ DispatcherServlet – Handles requests and delegates them.
+✅ Controllers – Process user input and interact with the model.
+✅ View Resolvers – Render views (like JSP, Thymeleaf).
+✅ Model – Holds business data.
+
+3) What is the front controller of Spring MVC?
+DispatcherServlet
+
+4)Explain the flow of Spring MVC?
+
+Spring MVC Flow 🚀
+1️ Client Request → A user sends a request (e.g., clicking a button or submitting a form).
+
+2️ DispatcherServlet (Front Controller) → Intercepts the request and determines the appropriate handler.
+
+3️ Handler Mapping → Finds the correct controller based on the request URL.
+
+4️ Controller → Processes the request, interacts with the Model (Service/DAO layer), and prepares data.
+
+5️ Model & View → The controller returns data (Model) and a logical view name.
+
+6️ View Resolver → Maps the logical view name to an actual view (e.g., JSP, Thymeleaf).
+
+7️ View (UI Layer) → Renders the response and sends it back to the client.
+
+Diagram Representation:
+🔻 Client Request → 🌍 DispatcherServlet → 📍 Controller → 🗄 Service/Model → 🎨 View Resolver → 🖥 View (Response to Client)
+
+
+5)What are the advantages of Spring MVC Framework?
+Separation of Concerns:
+Model, View, and Controller are separated, making the application easier to manage, test, and maintain.
+
+Flexibility:
+You can use different view technologies like JSP, Thymeleaf, FreeMarker, etc., without being tied to one.
+
+Loose Coupling:
+The Controller is decoupled from the View and Model, allowing better flexibility and easier updates or modifications.
+
+Extensibility:
+Spring MVC is highly extensible with features like custom interceptors, handlers, and view resolvers.
+
+Integration with Spring:
+Easy integration with other Spring modules, such as Spring Security, Spring Data, Spring AOP, etc.
+
+Easy Testing:
+With the clear separation of concerns, unit testing becomes simpler and more efficient.
+
+Built-in Features:
+Features like data binding, validation, and form handling are built-in.
+
+Supports RESTful Web Services:
+It has strong support for building REST APIs and handling HTTP methods (GET, POST, PUT, DELETE).
+
+Rich Ecosystem:
+It benefits from the Spring ecosystem, with a large community and many resources.
+
+

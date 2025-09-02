@@ -1,0 +1,243 @@
+STRING
+-------
+
+String
+StringBuffer
+StringBuilder
+StringTokenizer
+
+String is used to represent group of characters or character array enclosed
+within the double quotes.
+
+
+* it is possible to create String object in two ways.
+  1) without using new operator
+        String str = "ratan";
+
+  2)By using new Operator
+         String str = new String("ratan");
+
+
+//creating a string obj without using new operator:
+String str1 = "ratan";
+String str2 = "durga";
+String str3 = "ratan";
+
+the objects are created in SCP(String Constant Pool)
+
+str1,str3 --- ratan
+str2      --- durga
+
+
+* In SCP memory just before object creation it is always checking previous
+  objects.
+a. if the previous object is not available it will create the new object.
+b. if the previous object is available with the same content then the 
+    reference variable is pointing to existing object.
+
+
+== : operator always ment for reference-comparison
+
+  str1 == str2 : false
+  str1 == str3 : true
+  str2 == str3 : false
+
+
+SCP does not allow duplicate objects.
+
+
+//Creating a String object by using new operator
+String str1 =  new String("ratan");
+String str2 =  new String("durga");
+String str3 =  new String("ratan");
+
+
+The objects are created in heap memory 
+when we create object in heap area instead of checking previous objects it is directly creates  new objects.
+
+Str1 --- ratan
+str2 --- naresh
+str3 --- ratan
+
+  str1 == str2 : false
+  str1 == str3 : false
+  str2 == str3 : false
+
+
+EX: 
+
+== vs. equals() method
+
+
+public class demo2 {
+	
+	public demo2(String string) {	
+	}
+	
+	public static void main(String[] args) {
+		
+	
+		String str = "Ratan";
+		String str2 = "Ratan";
+
+		System.out.println(str.equals(str2));  //true
+		System.out.println(str==str2);         //true
+
+
+* .equals method 1st check str through String class (String have own class)
+     String class override .equals method from object class and after override .equals give result as String Store data in SCP 
+
+
+* == use for  object/reference comparison (come from same object or not)
+
+
+
+		demo2 d1 = new demo2("ratan");
+		demo2 d2 = new demo2("ratan");
+		
+		System.out.println(d1.equals(d2));  //false
+		System.out.println(d1==d2);         //false
+
+* in that equals method direct from object its heap processing 	
+
+               
+                demo2 d3 = new String("ratan");
+		demo2 d4 = new String("ratan");
+		
+		System.out.println(d3.equals(d4));  //true
+		System.out.println(d3==d4);         //false
+
+*in here string class use
+
+
+                StringBuffer d5 = new StringBuffer("ratan");
+		StringBuffer d6 = new StringBuffer("ratan");
+		
+		System.out.println(d5.equals(d6));  //false
+		System.out.println(d5==d6);         //false
+
+
+*StringBuffer not override .equals method and .equals method direct connect  to object class  
+	
+	}
+
+}
+
+
+NOTE:
+equals() method class to class behaviour changed
+but == operator always ment for ref-comp.
+
+equals(): return boolean
+          Object ---> refrence comparision
+          String ---> content  comparision
+          StringBuffer ---> it uses Object class equals reference comparision
+---------------------------------------------------------------------------
+
+EX:
+
+String :  CompareTo() vs. equals()
+
+equals() ---Boolean
+                    ratan  ratan = true
+                    ratan  anu   =  false
+
+
+compareTo() ---int  a=97  A=65  
+
+(compareTo() method store data in int,  compareTo() method is String class method)
+
+
+
+ratan ratan = 0
+ratan anu   = +ve  17 : if the first string unicode value is bigger than second string unicode value
+
+anu  ratan  = -ve  -17 : if the first string unicode value is less than second string unicode value 
+
+ratan ratan = -ve
+---------------------------------------------------------------------------
+
+public class demo3 {
+
+//possible to concat the String data in two ways.
+//concat is String method
+	
+	public static void main(String[] args) {
+		
+		String str1 = "ratan";
+		String str2 = "soft";
+		
+		//using concat
+		String ref1 = str1.concat(str2);
+		System.out.println(ref1);
+		
+		
+		//using "+" operator
+		String ref2 = str1 + str2;
+		System.out.println(ref2);
+	
+//ratansoft
+//ratansoft
+
+	}
+}
+---------------------------------------------------------------------------public class demo4 {
+	
+	public static void main(String[] args) {
+		
+	//String is immutable : one we create the String modification are not allowed.
+		String str = "ratan";
+		str.concat("soft");
+		System.out.println(str);
+		
+		
+	//stringBuffer is mutable : it allows the modifications
+		StringBuffer sb = new StringBuffer("durga");
+		sb.append("soft");
+		System.out.println(sb);
+		
+		
+	}
+
+}
+
+---------------------------------------------------------------------------
+
+* reassigning the reference variable
+
+	        String str1 = "ratan";
+		str1 = str1.concat("soft");
+		System.out.println(str1);
+
+
+//ratansoft
+
+NOTE: 
+Initially str is pointing to "ratan" Later it is reassigned to "ratansoft"
+so "ratan" object is garbage collected.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+String
+Immutable
+.equals() data comparrision
+ save tem memory
+   String s1 = "abc";
+   String s2 = "abc";
+
+StringBuffer
+mutable
+it is use object class equals reference comparision
+save tem memory
+   StringBuffer s1 = new StringBuffer("abc")  ;
+   StringBuffer s2 = new StringBuffer("abc" ) ;
+
+
+StringBuilder : java 1.5
+StringBuilder is same as StringBuffer except one difference
+        StringBuffer methods are synchonized : it is single threaded model
+		StringBuilder methods are non- synchronized : it is multithreaded model
+		
+
+String toString()
+        returns a string representation of the object.
+

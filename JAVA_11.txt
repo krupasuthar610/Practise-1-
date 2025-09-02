@@ -1,0 +1,27 @@
+JAVA 11
+
+
+1. var in Lambda Expressions
+Now you can use var inside lambda expressions.
+
+var greet = (var name) -> "Hello, " + name;
+System.out.println(greet.apply("John"));
+Benefit: Improves readability and allows annotations on parameters.
+
+---------------------------------------------------------------------------------
+2. New String Methods
+
+isBlank(): Checks if a string is empty or contains only whitespace
+lines(): Splits a string by line breaks.
+strip(): Removes extra spaces (better than trim()).
+
+---------------------------------------------------------------------------------------
+
+                                    HTTP                                              HTTPS
+Feature	               HTTP (HyperText Transfer Protocol)	                    HTTPS (HyperText Transfer Protocol Secure)
+Full Form	           HyperText Transfer Protocol	                            HyperText Transfer Protocol Secure
+Security	           Not secure	                                            Secure (Encrypted using SSL/TLS)
+Data Encryption	       No encryption, data sent as plain text	                Encrypts data to prevent hacking
+Port Used	           Uses port 80	                                            Uses port 443
+SSL/TLS Certificate	   Not required	                                            Requires SSL/TLS certificate
+Data Protection	       Vulnerable to hacking (Man-in-the-Middle attacks)	    Protects data from attackers

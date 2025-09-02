@@ -1,0 +1,38 @@
+wrapper classes wrap the primitive data type into objects.
+
+java is an Object oriented programming language so represent everything in the form of the object,
+but java supports 8- primitive data types these all are not of the object.
+
+primitive types : int
+wrapper_classes : Integer
+cons            : int,String
+
+
+advantages of wrapper classes :
+- collections allowed only object data
+- an object data we can call multiple methods. 
+    compareTo()   equals()  ToString()
+
+- Cloening process only object.
+- Object data allowed null values.
+- serialization only object data.....etc
+
+--------------------------------------------------------
+why we need wrapper classes ?
+convenient and flexible way to work with primitive data type
+
+--------------------------------------------------------
+The main importance of wrapper classes:-
+1. To convert a data types into the object means we are giving object from data types by using 
+constructor.
+2. To convert String into the data types by using parsexxx() method
+Utility methods:-
+1. valueOf()
+2. xxxValue()
+3. parsexxx()
+4. toString()
+
+--------------------------------------------------------
+AutoBoxing  --> Automatic conversion of the primitive to wrapper
+
+Autounboxing --> Automatic conversion of the wrapper to the primitive

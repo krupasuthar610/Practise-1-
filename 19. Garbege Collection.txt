@@ -1,0 +1,59 @@
+* garbage collection in java is an automatic process of looking at heap memory , identify which objects are in use 
+  and which are not , and deleting the unused objects.
+
+
+* main Advantage of automatic garbage collection in java is that it removes the burden of manual memory allocation/deallocation from us so that we can focus on problem solving.
+
+
+Q. who manages garbage collector
+
+* The JVM controls the garbage collector.
+* its the one decides when to run garbage collection.
+* JVM runs the garbage collector when it realizes that the memory is running low .
+
+* one can request the garbage collection to happen from within the java program but there is no guarantee that this request be taken care of by JVM.
+
+-----------------------------------------------------------------------------
+package com.exp.String;
+
+public class demo5 {
+	
+	public static void main(String[] args) {
+		
+		demo5 d = new demo5();
+		d = null;
+		
+	  System.gc();
+	  Runtime.getRuntime().gc();
+	  System.out.println("main method is done");
+	}
+	
+	@Override
+	protected void finalize() throws Throwable {
+	
+		System.out.println("finalize method is called");
+	}
+
+}
+
+finalize method is called
+main method is done
+---------------------------------------------------------------------------
+
+Q. purpose of overriding finalize() method ?
+
+* finalize method in java also called finalizer is a method defined in 
+  java.lang.object
+
+* it's called by garbage collector just before collecting any object which is eligible for GC.
+
+* thus Finalize() method provide last chance to object to do cleanup and free any remaining resource.
+ 
+NOTE: 
+* Only Once time the garbage collector calls the finalize() method for an Object .
+
+---------------------------------------------------------------------------
+Finalize Method
+
+teh purpose of finalize method is to release the resorces that is allocated by unused object, before removing unused object by garbage collection.
+

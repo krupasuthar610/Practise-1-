@@ -1,0 +1,81 @@
+* Process, Thread, Multitasking
+  Multi threading, Multiprocessing
+
+* Creating and Starting Thread in java
+* Life Cycle of Thread
+* Thread Operations, getting name, sleeping.
+* Demon Thread
+* Producer and Consumer Problem..
+
+---------------------------------------------------------------------
+* multi threading
+
+- multithreading in java is a process of executing multiple threads simultaneously.
+
+- A thread is a lightweight sub-process, the smallest unit of processing.
+
+
+
+
+* creating thread in java
+
+- Using Runnable
+- Using Thread
+
+
+public interface Runnable ----> parent of 
+
+public class Thread implements Runnable
+-------------------------------------------------------------------------
+package com.exp.multithreading;
+
+//creating our thread using Runnable Interface
+public class MyThread implements Runnable{
+
+	@Override
+	public void run() {
+		
+		//task for thread...
+		for(int i=1; i<=10; i++) {
+			
+			System.out.println("Value of i is : "+i);
+		}
+	}
+	
+	public static void main(String[] args) {
+		
+		//create object of MyThread class
+		MyThread t1 = new MyThread();
+		
+		// t1.start();
+		Thread thr = new Thread(t1);
+		
+		
+		//object of unOtherThread
+		MyUnotherThread t2= new MyUnotherThread();
+		
+		thr.start();
+		t2.start();
+		
+	}
+
+}
+--------------------------------------------------------------------------
+package com.exp.multithreading;
+
+//Creating Thread using Thread class
+public class MyUnotherThread extends Thread{
+	
+	public void run() {
+		
+		//task for thread
+		for(int i=10; i>=1; i--) {
+			
+			System.out.println("another thread :" +i);
+		}
+		
+		
+	}
+
+}
+---------------------------------------------------------------------------

@@ -1,0 +1,182 @@
+12)what is IOC control ?
+Inversion of Control (IoC) is a design principle where the control of object creation and dependency management is delegated to a container or framework, instead of being handled manually in your code.
+
+The IoC Container (like Spring) creates objects, resolves their dependencies, and manages their lifecycle.
+Developers declare dependencies (e.g., using annotations like @Autowired) instead of creating objects with new.
+IoC promotes loose coupling between components by following the Dependency Injection principle.
+
+
+13)spring bean - lifeCycle
+   *Container gets started.
+   *Container creates the objec of bean as per request.
+   *Dependencies is created
+   *Dependencies is injected
+   
+   
+Bean Lifecycle Stages
+Bean Instantiation
+The Spring container creates an instance of the bean using its constructor or factory method.
+
+Dependency Injection (Populating Properties)
+The container injects dependencies specified (e.g., via @Autowired, XML, or Java config).
+
+Bean Initialization
+
+Spring calls lifecycle callbacks like @PostConstruct or a custom init-method.
+Additional logic (e.g., initializing resources) can be executed here.
+Bean Usage
+The bean is ready to be used in the application.
+
+Bean Destruction
+
+When the container shuts down, it performs cleanup by calling @PreDestroy or a custom destroy-method.
+Useful for releasing resources (e.g., closing files or database connections).
+
+
+14)What is bean factory, have you used XMLBeanFactory ?
+this is root interface for accessing a spring bean container.
+it is the actual container instantiates, configures, and manages a numb of beans.
+
+XMLBeanFactory
+XmlBeanFactory is a deprecated implementation of BeanFactory used to create beans from an XML configuration file. It was used primarily in earlier versions of Spring (before ApplicationContext became the standard).
+
+Why Deprecated?
+It lacks advanced features like event propagation, annotation-based configuration, or AOP.
+Replaced by ApplicationContext, which is more versatile and widely used.
+
+
+15)difference between BeanFactory and ApplicationContext in Spring
+BeanFactory:
+
+Basic container for Spring beans.
+Loads beans lazily (creates beans only when they are needed).
+Suitable for simple and lightweight applications.
+ApplicationContext:
+
+Advanced container with additional features.
+Loads beans eagerly (creates all beans during startup unless specified).
+Supports additional features like:
+Event propagation.
+Internationalization.
+Annotation-based configurations.
+Integration with Spring AOP.
+In summary: Use ApplicationContext for most use cases due to its extra capabilities, and BeanFactory for resource-constrained scenarios.
+
+
+16)difference between Setter Injection and Constructor Injection in Java
+Setter Injection:
+Uses setter methods to inject dependencies.
+Allows partial injection (can set or update values after object creation).
+Good for optional or mutable dependencies.
+
+Constructor Injection:
+Uses constructors to inject dependencies.
+Ensures mandatory dependencies are provided during object creation.
+Good for required or immutable dependencies.
+
+
+17)what are diffrent module in spring ?
+
+1. Core Container
+Handles the core functionality of Spring:
+Core: Provides the core features like BeanFactory.
+Beans: Supports bean creation, configuration, and dependency injection.
+Context: Provides application context for enterprise-specific features.
+Expression Language (SpEL): Enables querying and manipulation of objects.
+
+2. AOP (Aspect-Oriented Programming)
+Provides support for cross-cutting concerns like logging, security, and transactions.
+
+3. Data Access/Integration
+Handles database and messaging integration:
+JDBC: Simplifies database operations and error handling.
+ORM: Integrates with frameworks like Hibernate and JPA.
+JMS: Supports messaging (Java Messaging Service).
+Transactions: Manages declarative and programmatic transactions.
+
+4. Web
+Used for creating web applications:
+Web: Basic web application development.
+Web MVC: Framework for MVC-based web applications.
+Web WebSocket: Supports WebSocket-based communication.
+Web Portlet: For portlet development (optional).
+
+5. Test
+Provides testing support, including JUnit and TestNG integration.
+
+6. Other Modules (for advanced functionality):
+Security: Authentication and authorization.
+Messaging: Integration with messaging systems (e.g., RabbitMQ).
+Integration: Provides enterprise integration patterns.
+These modules make Spring flexible and suitable for a wide range of applications.
+
+
+
+18)diffrence between @autowire and @inject 
+@Autowired:
+Part of the Spring framework.
+Specific to Spring, providing Spring-based dependency injection.
+
+@Inject:
+Part of the Java CDI (Contexts and Dependency Injection) specification in Javax package.
+Works with any framework that supports the CDI standard.
+
+
+19)diffrnce between @Bean @component?
+@Bean when you need more control over the bean definition or for third-party classes.
+@Component for application-specific classes that can be auto-detected during component
+
+
+20)what is autowiring in spring ? what are the autowrining modes ?
+injecting the beans automatically . we don't need to write explicit injection logic.
+no - this is the default mode, it means autowiring is not enabled
+byName - injects the bean based on property name. it's use setter method.
+byType - based on byType, its used setter
+constructor - it injects the bean using constructor
+
+21)different bean scopes in spring ?
+Spring provides several bean scopes to define the lifecycle and visibility of beans. These scopes determine how and when a bean instance is created and shared within an application.
+
+Singleton (Default Scope): A single instance of the bean is created for the entire Spring container.
+Prototype: A new bean instance is created every time it is requested.
+Request (Web applications only): A new bean instance is created for each HTTP request.
+Session (Web applications only): A new bean instance is created for each HTTP session.
+Application (Web applications only): A single bean instance is created for the entire ServletContext.
+WebSocket (WebSocket-enabled applications only): A new bean instance is created for each WebSocket session.
+
+----------------------------------------------------------------------------------------------------------------------
+22)What are the Features of Spring Boot?
+Auto-Configuration       – Automatically configures Spring components based on dependencies.
+Starter Dependencies     – Predefined dependencies like spring-boot-starter-web simplify setup.
+Embedded Servers         – Comes with built-in Tomcat, Jetty, or Undertow, so no need for external deployment.
+Microservices Support    – Ideal for building microservices-based applications.
+Spring Boot CLI          – Allows running Spring applications using command-line interface.
+Production-Ready (Actuator)   – Provides health checks, metrics, and monitoring tools.
+Externalized Configuration    – Supports properties and YAML files for easy customization.
+Spring Security Integration   – Easily integrates authentication and authorization.
+Simplified Deployment         – Supports JAR-based deployment with embedded servers.
+Fast Development              – Reduces boilerplate code and speeds up application setup.
+
+
+23)Define the Key Components of Spring Boot.
+Spring Boot starters
+Auto-configuration
+Spring Boot Actuator
+Spring Boot CLI
+Embedded Servers
+
+24)What are the advantages of using Spring Boot?
+Simplified Configuration  – Auto-configures components based on the project’s dependencies, reducing the need for manual setup.
+Faster Development        – With starter dependencies and minimal configuration, development time is shortened.
+Embedded Servers          – No need for an external server; Spring Boot comes with embedded Tomcat, Jetty, or Undertow.
+Production-Ready Features – Built-in tools like health checks, metrics, and monitoring (via Actuator) make apps production-ready.
+Easy Deployment           – Supports both JAR and WAR packaging, making it easier to deploy to cloud or on-premise servers.
+Microservices-Friendly    – Ideal for building microservices applications with features like embedded server, REST APIs, and easy   integration with Spring Cloud.
+
+Minimal Boilerplate Code  – Reduces the need for XML configuration and complex setup.
+Active Community & Documentation – Well-supported with extensive documentation, tutorials, and an active community.
+Integration with Spring Ecosystem – Seamlessly integrates with other Spring projects like Spring Security, Spring Data, Spring Batch, etc.
+Easy Testing – Built-in support for testing with annotations like @SpringBootTest, making unit and integration testing easier.
+
+
+25)diffrence betwwn spring  spring mvc  spring boot

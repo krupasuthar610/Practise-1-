@@ -1,0 +1,27 @@
+2nd highest salary of emply quvery 
+
+SELECT MAX(salary) AS second_highest_salary 
+FROM employees 
+WHERE salary < (SELECT MAX(salary) FROM employees);
+
+---------------------------------------------------------
+department wise highest salary
+
+SELECT DepartmentName, MAX(amount) AS Highest_Salary
+FROM dbo.TblEMDDepartment
+GROUP BY DepartmentName;
+
+-------------------------------------------------------
+display duplicate of column 
+
+SELECT DepartmentName, COUNT(*) AS count
+FROM dbo.TblEMDDepartment
+GROUP BY DepartmentName
+HAVING COUNT(*) > 1;
+
+---------------------------------------------------------
+pattern matching in sql 
+
+SELECT * FROM Employee WHERE EmployeeName LIKE '%ohn%';
+
+-------------------------------------------------------------

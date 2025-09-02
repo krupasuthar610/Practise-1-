@@ -1,0 +1,162 @@
+
+1. Arithmetic   5
+2. Assignment   6
+3. Relational   6
+4. Logical      3
+5. Ternary      2
+6. Unary        3
+
+
+Arithmetic Operators
++: Addition
+-: Subtraction
+*: Multiplication
+/: Division
+%: Modulo (remainder after division)
+
+
+Assignment Operators
+=: Simple assignment
++=: Adds and assigns (e.g., x += 3 is equivalent to x = x + 3)
+-=: Subtracts and assigns (similar to +=)
+*=: Multiplies and assigns (similar to +=)
+/=: Divides and assigns (similar to +=)
+%=: Modulo and assigns (similar to +=)
+
+
+Relational Operators
+==: Equal to
+!=: Not equal to
+<: Less than
+>: Greater than
+<=: Less than or equal to
+>=: Greater than or equal to
+
+
+Logical Operators
+&&: Logical AND (both operands must be true)
+||: Logical OR (at least one operand must be true)
+!: Logical NOT (inverts the truth value)
+
+
+Unary Operators
+++: Increment (increases the value by 1) - can be pre-increment (++x) or post-increment (x++)
+--: Decrement (decreases the value by 1) - similar to increment
+-: Negation (unary minus)
+
+
+Bitwise Operators
+&: Bitwise AND
+|: Bitwise OR
+^: Bitwise XOR (exclusive OR)
+~: Bitwise complement (flips the bits)
+<<: Left shift
+>>: Right shift (signed or unsigned)
+Conditional (Ternary) Operator
+
+-------------------------------------------------------------------------------------------
+package com.java;
+public class Arithmetic {
+    
+    public static void main(String[] args) {
+        
+        int a = 10; 
+        int b = 3 ; 
+        
+    System.err.println(a/b);
+     System.err.println(a*b);
+      System.err.println(a%b);
+       System.err.println(a+b);
+        System.err.println(a-b);
+    }
+}
+
+---------------------------------------------------------------------------------------------
+package com.java;
+public class Assingnment {
+   
+    public static void main(String[] args) {
+        
+          //value ek pachi ek  add thati jay symbol pramane  
+        // Assignment operators
+        int f = 7;
+        System.out.println("f += 3: " + (f += 3));
+        System.out.println("f -= 2: " + (f -= 2));
+        System.out.println("f *= 4: " + (f *= 4));
+        System.out.println("f /= 3: " + (f /= 3));
+        System.out.println("f %= 2: " + (f %= 2));
+        System.out.println("f &= 0b1010: " + (f &= 0b1010));
+        System.out.println("f |= 0b1100: " + (f |= 0b1100));
+        System.out.println("f ^= 0b1010: " + (f ^= 0b1010));
+        System.out.println("f <<= 2: " + (f <<= 2));
+        System.out.println("f >>= 1: " + (f >>= 1));
+        System.out.println("f >>>= 1: " + (f >>>= 1));
+    }
+}
+-------------------------------------------------------------------------------------------
+
+package com.java;
+
+public class Logical {
+    
+/*   &&, Logical AND: returns true when both conditions are true.
+     ||, Logical OR: returns true if at least one condition is true.
+      !, Logical NOT: returns true when a condition is false and vice-versa
+*/
+
+     public static void main (String[] args) {
+        // Logical operators
+        boolean x = true;
+        boolean y = false;
+       
+        System.out.println("x && y: " + (x && y));
+        System.out.println("x || y: " + (x || y));
+        System.out.println("!x: " + (!x));
+    }
+}
+-------------------------------------------------------------------------------------------
+package com.java;
+public class Realtional {
+  
+    public static void main(String[] args) {
+        
+         // Comparison operators
+        int a = 10;
+        int b = 3;
+        int c = 5;
+ 
+        System.out.println("a > b: " + (a > b));
+        System.out.println("a < b: " + (a < b));
+        System.out.println("a >= b: " + (a >= b));
+        System.out.println("a <= b: " + (a <= b));
+        System.out.println("a == c: " + (a == c));
+        System.out.println("a != c: " + (a != c));
+    
+    }
+}
+----------------------------------------------------------------------------------------------
+
+package com.java;
+
+public class Ternary {
+    
+    public static void main(String[] args)
+    {
+        int a = 20, b = 10, c = 30, result, result1;
+ 
+        result1 = ((a<c) ? a : c );  20
+        
+        System.out.println(result1);
+        
+        result = ((a > b) ? (a > c) ? a : c : (b > c) ? b : c);
+       
+        System.out.println( result); //30
+    }
+    
+}
+/* for nested ternary 
+pehla first condition check karse, e true hase to j : vala option ma jase 
+& jo first false hase to biji number in condition ma jato rese 
+
+*/
+------------------------------------------------------------------------------------------------

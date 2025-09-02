@@ -1,0 +1,18 @@
+ Use Jackson Annotations
+ Add these annotations from com.fasterxml.jackson.annotation:
+ 
+ 
+// In Parent
+@OneToMany(mappedBy = "parent", cascade = CascadeType.ALL)
+@JsonManagedReference
+private List<Child> children;
+
+// In Child
+@ManyToOne
+@JsonBackReference
+private Parent parent;
+
+
+@JsonManagedReference: serialize this side (children)
+@JsonBackReference: skip this side (parent) during serialization
+----------------------------------------------------------------------------

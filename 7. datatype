@@ -1,0 +1,47 @@
+
+ 
+1. used to represent the type of the variable & expressions.
+2. Represent how much memory is allocated for the variable.
+3. Specifies the range value of the variable.
+ 
+ 
+ 
+* There are 8 primitive data types in java
+ 
+DataType      size(in bytes)          Range                                         default values
+ 
+byte                     1                 -128 to                                                                  0
+short                   2         -32768 to 32767                                                          0
+int                      4           -2147483648      to       2147483647                        
+long                   8           –9,223,372,036,854,775,808 
+                                                to                                                     0
+                                      9,223,372,036,854,775,807 
+float                  4                    -3.4e38 to 3.4e                           0.0
+double            8                 -1.7e308 to 1.7e308                        0.0
+char                2                              0 to 6553                    single spaced
+Boolean       no-size                      no-range                              false
+ 
+ 
+ 
+BYTE:-
+Size: 1-byte
+MAX_VALUE : 127
+MIN_VALUE : -128
+Rang: -128 to 127
+ 
+* to represent numeric value(10, 20, 30...etc) 
+       byte   short    int       long
+ 
+* To represent decimal values(floating point values 10.5,30.6…etc) 
+      float  double
+ 
+*To represent character use char and take the character 
+    within single quotes.
+    
+*To represent true, and false use Boolean.
+ 
+*Except Boolean and char remaining all data types consider signed data types because we can 
+represent both +ve & -ve values.
+ 
+*Float vs double:-
+   The float will give 5 to 6 decimal places of accuracy but double gives 14 to 15 places of accuracy.

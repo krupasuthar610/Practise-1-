@@ -1,0 +1,60 @@
+keywords
+----------
+1. Final: used to indicate that a variable holds a constant value.
+2. Static: used for memory management. Method or variables.
+    
+3. Super : refers to superclass.  
+
+4. This: is used to refer to the current object in the method constructor
+	 
+Void: used to specify that a method does not have a return value.
+
+------------------------------------------------------------------------------------
+Access Modifiers
+----------------
+1. Private:  The access level of a private modifier is only within the class. 
+             It cannot be accessed from outside the class.
+2. Default:  within the package.
+             If you do not specify any access level,it will be the default.
+
+3. Protected:  within the package and outside 
+               the package through the child class. If you do not make the child class,
+              it cannot be accessed from outside the package.
+4. Public:   The access level of a public modifier is everywhere. It can be accessed 
+             from within the class, outside the class, within the package, and outside the package.
+   
+-------------------------------------------------------------------------------------------
+Object 
+---------
+	o An object is a real-world entity.
+	o An object is a runtime entity.
+	o The object is an entity that has a state and behavior.
+	o The object is an instance of a class.
+	 
+ 
+For Example, Pen is an object. Its name is Reynolds; the color is white, known as its state.
+It is used to write, so writing is its behavior.
+An object is an instance of a class. A class is a template or blueprint from which 
+objects are created. So, an object is an instance(result) of a class.
+
+
+--------------------------------------------------------------------------------------------
+class
+------
+A class is a group of objects which have common properties. It is a template or blueprint 
+from which objects are created. It is a logical entity. It can't be physical.
+Class is a logical entity, it contains the logic of the application
+A class in Java can contain:
+	o Fields
+	o Methods
+	o Constructors
+	o Blocks
+	o Nested class and interface
+
+--------------------------------------------------------------------------------------------
+
+An array is a collection of similar types of data. For example,
+ if we want to store the names of 100 people then we can create 
+ an array of the string type that can store 100 names. 
+      String[] array = new String[100]; Here, the above array cannot store more than 100 names.
+

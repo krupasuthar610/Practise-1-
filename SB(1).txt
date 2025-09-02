@@ -1,0 +1,161 @@
+1) Spring Boot
+- spring boot is a java famework that makes it easier to create and run java application.
+-it simplifies the configuration and setup process, allowing devlopers to focus more on writing code for their application.
+-SB, a module of the spring f., facilitates rapid application devlopment (RAD) capablities.
+- solve may problems like,,
+  configration
+  Dependancy mangement
+  Embedded server
+
+
+2)Why Spring Boot over Spring Framework:
+Auto Configuration – Sets things up for you automatically.
+Standalone – Run it like a normal Java app (no need for external server).
+Embedded Server – Built-in servers like Tomcat or Jetty.
+Starter Dependencies – Easy to include what you need (like web, JPA, etc.).
+Production Ready – Comes with monitoring and health checks.
+Minimal Configuration – Less setup, more coding.
+Spring Ecosystem – Works great with Spring tools and projects.
+
+3)Working of SpringBoot
+-start by the starter dependencies in pom
+-dewonload & auto-configure module as u includin pom
+
+
+4)Flow of Spring Boot Application:
+Project Setup: Create a Spring Boot project using Spring Initializr, Maven, or Gradle.
+Dependencies: Add relevant Spring Boot starters (e.g., spring-boot-starter-web, spring-boot-starter-data-jpa).
+Application Entry Point: A @SpringBootApplication annotated class serves as the main entry point with a main method.
+Component Scanning: Automatically detects components, configurations, and services using annotations like @Component, @Service, @Repository.
+Auto-Configuration: Spring Boot auto-configures components based on included dependencies (e.g., if spring-boot-starter-web is present, a web server is set up).
+Dependency Injection: Manages dependencies using the IoC Container, wiring beans via @Autowired, @Bean, or constructor injection.
+Request Handling: Web requests are routed to controllers annotated with @RestController or @Controller.
+Business Logic: Services (@Service) and Repositories (@Repository) handle the application's logic and persistence.
+Embedded Server: An embedded server (e.g., Tomcat) starts automatically when running the application.
+Production-Ready Features: Application exposes endpoints for health, metrics, and logging, configured via application.properties or application.yml.
+Deployment: Packaged as a standalone JAR file (or WAR if required), run with java -jar.
+
+
+5)SB Annoations
+
+@SpringBootApplication: combines three annotations
+
+@Configuration:
+ //Indicates a class contains Spring bean definitions.Equivalent to an XML configuration file in legacy Spring.
+ It tells Spring that this class contains configuration settings (like defining beans).
+ Similar to an XML configuration but done in Java.
+ 
+ @EnableAutoConfiguration:
+ //Automatically configures beans based on the classpath dependencies and settings.Removes the need for manual configuration.
+ It tells Spring Boot to automatically configure components based on dependencies.
+ For example, if you add Spring Web, it automatically configures an embedded Tomcat server
+      
+ @ComponentScan :
+ //Scans the package and its sub-packages for Spring components (@Component, @Service, etc.).
+ //Automatically registers them as beans in the Spring container.
+ It tells Spring to look for components (@Component, @Service, @Repository, @Controller) in a specified package and register them.
+
+@Bean:
+Purpose: It tells Spring, "This method creates a bean (an object) that Spring will manage."
+Where to Use: Inside a class annotated with @Configuration.
+
+@Component:it is used to mark a class as a spring bean that will be managed by the spring container.
+@Autowired: Automatically injects beans.
+@Service: used to annotated classes that contain business logic.
+@Repository: Marks a class as a Data Access Object (DAO).
+
+@RestController: 
+Combines @Controller and @ResponseBody for REST APIs.
+Combines @Controller and @ResponseBody. It marks a class as a REST API controller where methods return JSON or XML directly (not views).
+
+@Controller:
+Marks a class as a Spring MVC controller. Methods in this class return a view name (like an HTML page).
+
+@ResponseBody
+Indicates that the return value of a method should be serialized directly to the HTTP response body (e.g., as JSON).
+
+@RequestMapping:
+is used to map HTTP requests to controller classes or methods. It can specify the URL path, HTTP methods, parameters, etc.
+is versatile but can be replaced with more specific annotations for better readability in Spring Boot.
+
+@GetMapping:
+Use @GetMapping when you need to retrieve or read data in REST APIs.
+Handles HTTP GET requests directly.
+Reduces boilerplate code compared to @RequestMapping.
+Supports path variables, query parameters, headers, and JSON responses.
+
+@PostMapping:
+used to handle HTTP POST requests. It’s typically used to create or submit data, such as creating a new resource in a REST API.
+Handles HTTP POST requests directly.
+Simplifies handling request bodies using @RequestBody.
+Easily combines with @PathVariable, @RequestParam, and headers.
+
+@PutMapping:
+is a Spring annotation used to handle HTTP PUT requests. It is generally used to update or replace an existing resource on the server.
+Used to completely replace an existing resource. All fields of the resource are updated, and any missing fields are typically set to null.
+PUT = Full update
+
+@PatchMapping: 
+Used to partially update an existing resource. Only the fields specified in the request are updated, not the whole resource.
+PATCH = Partial update
+
+
+@DeleteMapping: 
+handling HTTP DELETE requests.For deleting data.
+
+@RequestBody:
+is used to bind the HTTP request body to a Java object. It tells Spring to deserialize the incoming request data (usually in JSON or XML format) into an object.
+Used to deserialize the request body into a Java object.
+Commonly used in REST APIs (in POST and PUT methods) to handle the data sent from clients.
+Automatically works with JSON (or other media types if configured).
+Custom serializers/deserializers can be configured for more advanced use cases.
+
+Serialization: Converting Java objects into JSON.
+Deserialization: Converting JSON data into Java objects.
+This process is automatic when using @RequestBody (deserialization) and returning objects in controller methods (serialization).
+
+
+@PathVariable:
+is used in Spring Boot to bind URL template variables in your request URL to method parameters. It is commonly used in REST APIs when you need to extract dynamic data (like IDs, usernames, etc.) from the URL path.
+
+@RequestParam:
+is used in Spring Boot to extract query parameters from the URL. It binds the value of a query parameter to a method parameter in your controller.
+Use @RequestParam for data passed in the query string (?key=value).
+It’s commonly used in filtering, searching, or passing extra information to an API.
+For parameters in the URL path, use @PathVariable.
+
+@RequestHeader:
+Use @RequestHeader when you need information like:
+Authentication tokens (Authorization headers).
+User information (User-Agent).
+Content negotiation details (Accept, Content-Type).
+It is helpful in building APIs where header values contain important metadata.
+
+
+@RequestAttribute: 
+ simplifies passing shared information between layers in a Spring Boot application, making your architecture cleaner and more maintainable.
+
+@Required:
+Ensures that a bean property (set through a setter method) must be provided a value during Spring configuration. If the property isn’t set, the application will throw a BeanInitializationException.
+Only works with XML-based configuration (deprecated in Spring 5). For modern Spring applications, use constructor injection or @Autowired with validations instead.
+
+@Qualifier
+in Spring is used to differentiate between multiple beans of the same type. When you have multiple beans of the same type in your application context, @Qualifier helps the framework decide which one to use in dependency injection.
+
+@Lazy:
+The @Lazy annotation in Spring delays the initialization of a bean until it is first used. By default, Spring initializes all singleton beans during application startup. Marking a bean as @Lazy tells Spring to initialize it on-demand rather than at startup.
+
+
+ResponseEntity
+
+6)Spring Boot Starters
+Spring Boot Starters are ready-to-use dependencies for adding specific features (e.g., web, database, or security) to your application, reducing complexity and speeding up development.
+
+
+7)key dependencies of SP
+spring-boot-starter-parent
+spring-boot-maven-plugin
+spring-boot-starter-test,security,actuater,web,jpa
+
+
+

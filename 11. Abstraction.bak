@@ -1,0 +1,44 @@
+Hiding the internal implementation and highlighting the set of services that process is 
+called abstraction.
+
+Example :
+ATM machine je aapne bau bodhi functionality provides kare che pan internally process show
+nathi kartu.
+
+here are two ways to achieve abstraction in java
+	1. Abstract class (0 to 100%)
+	2. Interface (100%)
+ 
+classes are devided into two types
+1) Normal classes
+2) Abstract classes
+Normal classes:-
+Normal class is a java class it contains only normal methods.
+Abstract class:-
+A class which is declared as abstract is known as an abstract class. It can have abstract and non-abstract methods.
+It needs to be extended and its method implemented. It cannot be instantiated.
+
+Points to Remember
+	• An abstract class must be declared with an abstract keyword.
+	• Abstract class is a java class which contains at least one abstract method.
+	• It can have abstract and non-abstract methods.
+	• It cannot be instantiated.
+	• It can have constructors and static methods also.
+	• It can have final methods which will force the subclass not to change the body of the
+   	  method.
+	• To specify the particular class is abstract and particular method is abstract method to the 
+          compiler use abstract modifier.
+        • For the abstract classes it is not possible to create an object. Because it contains the 
+          unimplemented methods.
+        • For any class if we don’t want instantiation then we have to declare that class as abstract i.e., for 
+          abstract classes instantiation (creation of object) is not possible
+
+
+ void add(){}
+abstract void add();
+
+•The method which is having declaration but not implementations such type of methods 
+ are called abstract Method. Hence every abstract method should end with “;”.
+•The child classes are responsible to provide implementation for parent class abstract
+ methods.
+• if method decalre as abstarct its must have in abstract class otehtr wise sysytem gernate compile time error.

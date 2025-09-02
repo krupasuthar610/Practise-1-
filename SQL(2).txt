@@ -1,0 +1,16 @@
+2. Advanced SQL Concepts
+Joins
+
+Types: INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN, CROSS JOIN.
+Subqueries and Nested Queries
+
+Using subqueries in SELECT, FROM, WHERE.
+Set Operations
+
+UNION, UNION ALL, INTERSECT, EXCEPT.
+Window Functions
+
+Functions like ROW_NUMBER(), RANK(), DENSE_RANK(), NTILE(), OVER().
+Common Table Expressions (CTEs)
+
+Using WITH for query organization.

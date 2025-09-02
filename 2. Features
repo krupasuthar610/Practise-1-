@@ -1,0 +1,114 @@
+	1. Object oriented 
+	2. Platform Independent
+	3. Simple
+	4. Secured
+	5. Robust
+	6. Portable
+	7. Dynamic
+	8. Multithreaded
+  
+
+
+OBJECT ORIENTED 
+Java Language is considered an object-oriented language because it is based on the 
+concept of objects and classes. Without the creation of objects and classes,
+it is impossible to write any code in Java.
+Java supports the concepts of OOPS - Inheritance, abstraction, polymorphism,  encapsulation.
+  
+Simple
+Java is simple because: Its coding style is very clean and easy to understand. 
+It removes complexity because it doesn't use complex and difficult features of 
+other languages like C and C++, which are as follows: Concept of Explicit Pointers.
+
+
+Platform Independent
+Java is platform-independent because it uses a virtual machine. 
+The Java programming language and all APIs are compiled into bytecodes.
+Bytecodes are effectively platform-independent.
+
+First we save the java program file Test.java,
+then in the CMD we write    javac  Test.java,   and click the enter,  our 
+ .java file are compiled,  
+Create a new  .class file, and converted our  code into bytecode(computer) 
+ language.(because computer don’t understand are language )
+And we run this .class file in any platform Ex. Linux, Mac, Os.
+
+Compile --> javac Test.java
+Run --> Java Test
+
+
+Robust
+The English mining of Robust is strong. Java is robust because:
+	• It uses strong memory management.
+	• There is a lack of pointers that avoids security problems.
+	• Java provides automatic garbage collection which runs on the Java
+      Virtual Machine to get rid of objects which are not being used by
+	  a Java application anymore.
+	• There are exception handling and the type checking mechanism in Java.
+      All these points make Java robust.
+
+
+Portable
+Java is portable because it facilitates you to carry the Java bytecode to any platform. 
+It doesn't require any implementation.
+
+
+Multi-threaded
+multithreading  is a  process to execute multiple  threads at  the same time without
+dependency of other threads called multithreading.
+
+
+Dynamic
+Java is considered dynamic because of Bytecode. 
+The source code which is written in one platform that code can be executed in any platform.
+It loads the class file during runtime only. Hence, any thing that happens in runtime
+is dynamic.
+
+
+Secured
+	• Java not support explicit pointer.
+	• Java Programs run inside a virtual machine sandbox
+
+ explicit pointer
+
+
+// C program to illustrate Pointers
+#include <stdio.h>
+ 
+void geeks()
+{
+    int var = 20;
+ 
+    // declare pointer variable
+    int* ptr;
+ 
+    // note that data type of ptr and var must be same
+    ptr = &var;
+ 
+    // assign the address of a variable to a pointer
+    printf("Value at ptr = %p \n", ptr);
+    printf("Value at var = %d \n", var);
+    printf("Value at *ptr = %d \n", *ptr);
+}
+ 
+// Driver program
+int main()
+{
+    geeks();
+    return 0;
+}
+Output
+Value at ptr = 0x7ffd15b5deec 
+Value at var = 20 
+Value at *ptr = 20 
+
+[pointer ae che j ,  aapde variable decler kari  aene data type na size na memory ma 
+jagiya aapiye chiye , pan aema computer memory ma kiya  jagiya aapi e jova mate pointer
+no use thay che . Je aa example na output ma show thay che ke, pela normal value show
+kare che nd after use pointer ae value ni jagiya show kare che ke aa memory kiya a lot
+thai che ]
+[java not support explicit pointer]
+
+	• Implicit   -->  je computer through thay che.
+	• Explicit  -->  je user through thay che. (I have ex. On pdf) 
+

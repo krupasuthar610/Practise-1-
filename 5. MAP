@@ -1,0 +1,19 @@
+Map
+Stores entries as key-value pairs.
+Each key is unique.
+Values can be duplicated.
+Common implementations: HashMap, LinkedHashMap, TreeMap.
+
+Feature	            HashMap	                     LinkedHashMap	                                      TreeMap
+Order	            No order	                 Maintains insertion order	                Sorted by keys (natural or custom order)
+Null Keys	        1 allowed	                 1 allowed	                                Not allowed (for keys)
+Speed	            Fast (O(1) for get/put)	     Slightly slower than HashMap	            Slower (O(log n) for get/put)
+Internal Use	    Hash table	                 Hash table + Linked list	                Red-Black Tree
+Use Case	        Best for quick access	     When you need order + access speed	        When you need sorted keys
+
+
+HashMap → Fast lookup, no order needed.
+
+LinkedHashMap → Want order preserved.
+
+TreeMap → Want keys sorted.
